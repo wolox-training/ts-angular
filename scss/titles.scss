@@ -1,0 +1,15 @@
+$title-decoration-height: 90px;
+$title-decoration-width: 70px;
+$text-big: 24px;
+
+.title {
+  font-size: $text-big;
+  display: flex;
+  align-items: center;
+}
+
+.title-decoration {
+  content: url(assets/triangle.svg);
+  height: $title-decoration-height;
+  width: $title-decoration-width;
+}
