@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 $title-decoration-height: 90px;
 $title-decoration-width: 70px;
 $text-big: 24px;
 
 .title {
   font-size: $text-big;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
+  margin: 100px 0 0 100px;
 }
 
 .title-decoration {
   content: url(assets/triangle.svg);
   height: $title-decoration-height;
   width: $title-decoration-width;
-  margin: 0 -18px 0 100px;
+  margin-right: -18px;
 }
