@@ -1,0 +1,21 @@
+$tech-logo-size: 100px;
+$green: #BED23C;
+$nav-height: 70px;
+$nav-logo-height: 30px;
+$text-small: 12px;
+
+.tech-logo {
+  width: $tech-logo-size;
+  height: $tech-logo-size;
+}
+
+.technology {
+  background-color: $green;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 10px 40px 40px 10px;
+  width: 250px;
+}
