@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $title-decoration-height: 90px;
 $title-decoration-width: 70px;
 $text-big: 24px;
 
 .title {
-  font-size: $text-big;
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
-  margin: 100px 0 0 100px;
-}
+  margin: 100px 0;
 
-.title-decoration {
-  content: url(assets/triangle.svg);
-  height: $title-decoration-height;
-  width: $title-decoration-width;
-  margin-right: -18px;
+  h1 {
+  	position: absolute;
+  	font-size: $text-big;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 52px;
+  }
+
+  &:before {
+    content: url(assets/triangle.svg);
+    height: $title-decoration-height;
+    width: $title-decoration-width;
+  }
 }
