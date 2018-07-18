@@ -3,6 +3,7 @@ $green: #BED23C;
 $nav-height: 70px;
 $nav-logo-height: 30px;
 $text-small: 12px;
+$text-medium: 16px;
 
 .tech-logo {
   width: $tech-logo-size;
@@ -18,4 +19,29 @@ $text-small: 12px;
   text-align: center;
   padding: 10px 40px 40px 10px;
   width: 250px;
+  font-size: $text-small;
+  border-radius: 10px;
+
+  * {
+  	padding: 5px;
+  }
+
+  p {
+  	margin-top: 5px;
+  }
+
+  h2 {
+  	font-size: $text-medium;
+  }
+
+  h3 {
+  	font-weight: bold;
+  }
+
+}
+
+nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
 }
