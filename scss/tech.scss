@@ -19,7 +19,7 @@ $text-medium: 16px;
   margin: 15px;
 
   .tech-logo, .tech-title, .tech-rls, .tech-desc {
-  	padding: 5px;
+    padding: 5px;
   }
 
   .tech-logo {
@@ -28,20 +28,20 @@ $text-medium: 16px;
   }
 
   .tech-desc {
-  	margin-top: 5px;
+    margin-top: 5px;
   }
 
   .tech-title {
-  	font-size: $text-medium;
+    font-size: $text-medium;
   }
 
   .tech-rls {
-  	font-weight: bold;
+    font-weight: bold;
   }
 
   &::before {
     content: '';
-  	position: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     border: 1px solid $green;
