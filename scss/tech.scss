@@ -49,6 +49,13 @@ $text-medium: 16px;
     left: -10px;
     top: -10px;
     z-index: -1;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    border: 1px solid $green;
+    left: 10px;
+    top: 10px;
   }
 }
 
