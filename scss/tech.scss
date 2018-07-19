@@ -12,11 +12,11 @@ $text-medium: 16px;
   align-items: center;
   text-align: center;
   padding: 10px 30px 30px 10px;
-  width: 200px;
+  width: 210px;
   font-size: $text-small;
   border-radius: 10px;
   position: relative;
-  margin: 15px;
+  margin: 20px;
 
   * {
   	padding: 5px;
@@ -50,12 +50,13 @@ $text-medium: 16px;
   	top: -10px;
   	z-index: -1;
   }
-  
+
 }
 
 .techs {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left: 300px;
+  margin: 0 300px;
 }
