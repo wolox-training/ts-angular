@@ -3,12 +3,11 @@ $nav-height: 70px;
 $nav-logo-height: 30px;
 
 .technology {
-  background-color: $green;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px 30px 30px 10px;
+  padding: 10px 20px 30px 20px;
   width: 210px;
   font-size: $text-small;
   border-radius: 10px;
@@ -35,31 +34,26 @@ $nav-logo-height: 30px;
   .tech-rls {
     font-weight: bold;
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid $green;
-    border-radius: 10px;
-    left: -10px;
-    top: -10px;
-    z-index: -1;
-    transition: all 0.5s ease;
-  }
-
-  &:hover::before {
-    border: 1px solid $green;
-    left: 10px;
-    top: 10px;
-  }
 }
 
 .techs {
+  margin: 0 300px;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-areas:
+    "main sub";
+}
+
+.techs-main {
+  grid-area: main;
+  align-self: center;
+}
+
+.techs-sub {
+  border-left: 2px solid $green;
+  grid-area: sub;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 300px;
 }
