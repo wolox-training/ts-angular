@@ -9,11 +9,11 @@ $nav-logo-height: 30px;
   align-items: center;
   text-align: center;
   padding: 10px 30px 30px 10px;
-  width: 200px;
+  width: 210px;
   font-size: $text-small;
   border-radius: 10px;
   position: relative;
-  margin: 15px;
+  margin: 20px;
 
   .tech-logo, .tech-title, .tech-rls, .tech-desc {
     padding: 5px;
@@ -46,12 +46,20 @@ $nav-logo-height: 30px;
     left: -10px;
     top: -10px;
     z-index: -1;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    border: 1px solid $green;
+    left: 10px;
+    top: 10px;
   }
 }
 
 .techs {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left: 300px;
+  margin: 0 300px;
 }
