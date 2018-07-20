@@ -1,9 +1,6 @@
 $tech-logo-size: 100px;
-$green: #BED23C;
 $nav-height: 70px;
 $nav-logo-height: 30px;
-$text-small: 12px;
-$text-medium: 16px;
 
 .technology {
   background-color: $green;
@@ -49,6 +46,13 @@ $text-medium: 16px;
     left: -10px;
     top: -10px;
     z-index: -1;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    border: 1px solid $green;
+    left: 10px;
+    top: 10px;
   }
 }
 
