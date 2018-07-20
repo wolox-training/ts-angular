@@ -6,8 +6,9 @@ $foot-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 100px;
+  padding: 40px 30px 20px 0;
 
   .footer-slog {
     color: white;
@@ -17,14 +18,6 @@ $foot-height: 200px;
   .footer-cpyrgt {
     color: white;
     font-size: $text-small;
-    position: relative;
-    left: 790px;
-    bottom: -20px;
-  }
-
-  .footer-logo {
-    position: relative;
-    top: 18px;
-    left: auto;
+    align-self: flex-end;
   }
 }
