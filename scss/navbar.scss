@@ -1,0 +1,26 @@
+$wolox-logo-size: 200px;
+$nav-height: 90px;
+
+.navbar {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+  height: $nav-height;
+  padding: 30px 20px;
+  box-shadow: 0 8px 5px -5px $grey;
+  top: 0;
+  left: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  .navbar-logo{
+    width: $wolox-logo-size;
+  }
+
+  .navbar-title {
+    font-size: $text-big;
+    font-family: $roboto;
+  }
+}
