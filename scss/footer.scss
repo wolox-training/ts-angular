@@ -1,7 +1,4 @@
-$blue: #00ADEE;
 $foot-height: 200px;
-$text-big: 24px;
-$text-small: 12px;
 
 .footer-cont {
   background-color: $blue;
@@ -26,6 +23,8 @@ $text-small: 12px;
   }
 
   .footer-logo {
-    margin-top: 10px;
+    position: relative;
+    top: 18px;
+    left: auto;
   }
 }
