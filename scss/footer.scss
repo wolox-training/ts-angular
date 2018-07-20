@@ -1,0 +1,23 @@
+$foot-height: 200px;
+
+.footer-cont {
+  background-color: $blue;
+  height: $foot-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+  padding: 40px 30px 20px 0;
+
+  .footer-slog {
+    color: white;
+    font-size: $text-big;
+  }
+
+  .footer-cpyrgt {
+    color: white;
+    font-size: $text-small;
+    align-self: flex-end;
+  }
+}
