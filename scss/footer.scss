@@ -9,7 +9,8 @@ $text-small: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 100px;
 
   .footer-slog {
     color: white;
@@ -20,7 +21,11 @@ $text-small: 12px;
     color: white;
     font-size: $text-small;
     position: relative;
-    left: 750px;
-    bottom: 10px;
+    left: 790px;
+    bottom: -20px;
+  }
+
+  .footer-logo {
+    margin-top: 10px;
   }
 }
