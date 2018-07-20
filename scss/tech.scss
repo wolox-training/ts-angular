@@ -42,18 +42,18 @@ $nav-logo-height: 30px;
   grid-template-columns: 1fr 6fr;
   grid-template-areas:
     "main sub";
-}
 
-.techs-main {
-  grid-area: main;
-  align-self: center;
-}
+  .techs-main {
+    grid-area: main;
+    align-self: center;
+  }
 
-.techs-sub {
-  border-left: 2px solid $green;
-  grid-area: sub;
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  .techs-sub {
+    border-left: 2px solid $green;
+    grid-area: sub;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
