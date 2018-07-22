@@ -15,12 +15,18 @@ $nav-height: 90px;
   z-index: 1;
   width: 100%;
 
-  .navbar-logo{
+  .navbar-logo {
     width: $wolox-logo-size;
   }
 
   .navbar-title {
     font-size: $text-big;
     font-family: $roboto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-title {
+    display: none;
   }
 }
