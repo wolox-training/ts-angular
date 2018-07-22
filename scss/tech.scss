@@ -31,16 +31,16 @@ $tech-logo-size: 100px;
   .tech-rls {
     font-weight: bold;
   }
+
+  :first-child {
+    justify-content: center;
+    grid-row: 1/3;
+    border-right: 2px solid $green;
+  }
 }
 
 .techs {
   margin: 0 300px;
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
-
-  .technology:first-child {
-    justify-content: center;
-    grid-row: 1/3;
-    border-right: 2px solid $green;
-  }
 }
