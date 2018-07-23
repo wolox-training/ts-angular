@@ -44,3 +44,24 @@ $tech-logo-size: 100px;
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
 }
+
+@media only screen and (max-width: 1024px) {
+  .techs {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .technology {
+    border-bottom: 2px solid $green;
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
