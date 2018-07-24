@@ -1,4 +1,4 @@
-<div *ngIf="!firstName; else forminfo">
+<div *ngIf="!user.firstName; else forminfo">
   <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
     <div  class="form-container">
       <div clas="row-columns">
@@ -19,7 +19,7 @@
           <input type="text" formControlName="password">
         </label>
         <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</div>
-        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+        <input type="submit" class="button expanded" value="Sign Up" [disabled]="!rForm.valid">
       </div>
     </div>
   </form>
@@ -28,10 +28,7 @@
 <ng-template #forminfo>
   <div  class="form-container">
     <div clas="row-columns">
-      <p> {{ firstName }}</p>
-      <p> {{ lastName }}</p>
-      <p> {{ email }}</p>
-      <p> {{ password }}</p>
+      <p> {{ user }}</p>
     </div>
   </div>
 </ng-template>
