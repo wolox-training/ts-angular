@@ -14,16 +14,14 @@ export class RegisterComponent implements OnInit {
   post: any;
   fieldRequiredAlert: string = "This field is required.";
 
-  private user: any;
-
   constructor(private fb: FormBuilder) {
 
     this.rForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
       'email': [null, Validators.compose([Validators.required, Validators.email])],
-      'password': ['', Validators.compose([Validators.required, Validators.minLength(8)])],
-      'confirmPassword': ['', Validators.required]
+      'password': [null, Validators.compose([Validators.required, Validators.minLength(8)])],
+      'confirmPassword': [null, Validators.required]
     },
     {
        validator: ConfirmPassword.MatchPassword
@@ -34,7 +32,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addPost(post) {
-    this.user = new UserComponent(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
-    console.log(JSON.stringify({user: this.user}));
+    let user = new UserComponent(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
+    console.log(JSON.stringify({user: user}));
   }
 }
