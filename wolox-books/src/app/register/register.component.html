@@ -1,34 +1,29 @@
-<div *ngIf="!user.firstName; else forminfo">
-  <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
-    <div  class="form-container">
-      <div clas="row-columns">
-        <h1>Books</h1>
-        <label>First Name
-          <input type="text" formControlName="firstName">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</div>
-        <label>Last Name
-          <input type="text" formControlName="lastName">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</div>
-        <label>Email
-          <input type="text" formControlName="email">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ fieldRequiredAlert }}</div>
-        <label>Password
-          <input type="text" formControlName="password">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</div>
-        <input type="submit" class="button expanded" value="Sign Up" [disabled]="!rForm.valid">
-      </div>
-    </div>
-  </form>
-</div>
 
-<ng-template #forminfo>
+<form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
   <div  class="form-container">
     <div clas="row-columns">
-      <p> {{ user }}</p>
+      <h1>Books</h1>
+      <label>First Name
+        <input type="text" formControlName="firstName">
+      </label>
+      <div class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</div>
+      <label>Last Name
+        <input type="text" formControlName="lastName">
+      </label>
+      <div class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</div>
+      <label>Email
+        <input type="text" formControlName="email">
+      </label>
+      <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Please enter a valid email.</div>
+      <label>Password
+        <input type="text" formControlName="password">
+      </label>
+      <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</div>
+      <label>Confirm Password
+        <input type="text" formControlName="confirmPassword">
+      </label>
+      <div class="alert" *ngIf="rForm.controls.confirmPassword.MatchPassword && rForm.controls['confirmPassword'].touched">Password does not match the confirm password.</div>
+      <input type="submit" class="button expanded" value="Sign Up" [disabled]="!rForm.valid">
     </div>
   </div>
-</ng-template>
+</form>
