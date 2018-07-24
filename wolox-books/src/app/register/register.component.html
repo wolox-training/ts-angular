@@ -22,7 +22,7 @@
       <label>Confirm Password
         <input type="text" formControlName="confirmPassword">
       </label>
-      <div class="alert" *ngIf="rForm.controls.confirmPassword.MatchPassword && rForm.controls['confirmPassword'].touched">Password does not match the confirm password.</div>
+      <div class="alert" *ngIf="rForm.controls.confirmPassword.errors?.MatchPassword && rForm.controls['confirmPassword'].touched">Password does not match the confirm password.</div>
       <input type="submit" class="button expanded" value="Sign Up" [disabled]="!rForm.valid">
     </div>
   </div>

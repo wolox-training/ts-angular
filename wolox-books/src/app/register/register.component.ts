@@ -37,6 +37,6 @@ export class RegisterComponent implements OnInit {
 
   addPost(post) {
     this.user = new UserComponent(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
-    console.log(JSON.stringify(this.user));
+    console.log(JSON.stringify({user: this.user}));
   }
 }

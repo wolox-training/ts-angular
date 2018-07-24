@@ -5,8 +5,11 @@ export class ConfirmPassword {
      let password = AC.get('password').value;
      let confirmPassword = AC.get('confirmPassword').value;
       if(password != confirmPassword) {
-          return {MatchPassword: true};
+          AC.get('confirmPassword').setErrors({MatchPassword: true})
       } else {
+          AC.get('confirmPassword').updateValueAndValidity(
+            {onlySelf: true, emitEvent: false}
+          );
           return null
       }
     }
