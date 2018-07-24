@@ -24,12 +24,10 @@ export class RegisterComponent implements OnInit {
       'email': [null, Validators.compose([Validators.required, Validators.email])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(8)])],
       'confirmPassword': ['', Validators.required]
-    }
-    ,
+    },
     {
-      validator: ConfirmPassword.MatchPassword
-    }
-  );
+       validator: ConfirmPassword.MatchPassword
+    })
   }
 
   ngOnInit() {
