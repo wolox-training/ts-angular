@@ -6,17 +6,20 @@
         <label>First Name
           <input type="text" formControlName="firstName">
         </label>
+        <div class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</div>
         <label>Last Name
           <input type="text" formControlName="lastName">
         </label>
+        <div class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</div>
         <label>Email
           <input type="text" formControlName="email">
         </label>
+        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ fieldRequiredAlert }}</div>
         <label>Password
           <input type="text" formControlName="password">
         </label>
+        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</div>
         <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
-
       </div>
     </div>
   </form>

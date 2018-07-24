@@ -13,15 +13,15 @@ export class RegisterComponent implements OnInit {
   lastName: string;
   email: string;
   password: string;
+  fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder) {
     this.rForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
       'email': [null, Validators.required],
-      'password': [null, Validators.required]
+      'password': [null, Validators.compose([Validators.required, Validators.minLength(8)])]
     });
-
   }
 
   ngOnInit() {
