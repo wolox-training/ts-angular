@@ -12,9 +12,11 @@ $header-logo-width: 300px;
   border-top: 5px solid $blue;
   padding: 20px;
 
+
   .form-field {
     margin-bottom: 10px;
     font-size: $text-small;
+    font-family: $lato;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -24,6 +26,7 @@ $header-logo-width: 300px;
     padding: 7px;
     border-radius: 5px;
     margin: 5px 0;
+    font-family: $lato;
   }
 
   .form-login {
@@ -43,6 +46,7 @@ $header-logo-width: 300px;
   margin-bottom: 20px;
 
   .header-title {
+    font-family: $lato;
     font-size: $text-medium;
   }
 
@@ -53,6 +57,7 @@ $header-logo-width: 300px;
 }
 
 .alert {
+  font-family: $lato;
   background: $alert-color;
   padding: 7px;
   font-size: $text-alert;
@@ -69,6 +74,7 @@ $header-logo-width: 300px;
   margin: 20px 0;
   border-radius: 5px;
   cursor: pointer;
+  font-family: $lato;
 
   &:disabled {
     border: 2px solid $green;
@@ -86,10 +92,6 @@ $header-logo-width: 300px;
   &:active {
     box-shadow: 0 5px $green-shadow;
     transform: translateY(5px);
-  }
-
-  &:before {
-    border: 1px solid;
   }
 }
 
