@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../user/user';
-import { ConfirmPassword } from '../custom-validations/confirm.password'
+import { User } from '../../components/user/user';
+import { ConfirmPassword } from '../../components/custom-validations/confirm.password'
 
 @Component({
   selector: 'app-register',
