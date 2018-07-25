@@ -1,13 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
-})
-
-export class UserComponent implements OnInit {
-
+export class User {
   constructor(private firstName: string, private lastName: string, private email: string, private password: string, private confirmPassword: string) {
     this.firstName: = firstName;
     this.lastName: = lastName;
@@ -16,8 +7,4 @@ export class UserComponent implements OnInit {
     this.confirmPassword: = confirmPassword;
     this.locale = "en";
   }
-
-  ngOnInit() {
-  }
-
 }

@@ -5,11 +5,11 @@
       <h1 class="header-title">BOOKS</h1>
     </header>
     <div class="form-signup">
-      <label class="form-field">First Name
+      <label class="form-field">First name
         <input type="text" formControlName="firstName" class="form-input">
       </label>
       <p class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</p>
-      <label class="form-field">Last Name
+      <label class="form-field">Last name
         <input type="text" formControlName="lastName" class="form-input">
       </label>
       <p class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</p>
@@ -25,7 +25,7 @@
         <input type="password" formControlName="confirmPassword" class="form-input">
       </label>
       <p class="alert" *ngIf="rForm.controls.confirmPassword.errors?.MatchPassword && rForm.controls['confirmPassword'].touched && rForm.controls['password'].valid">Password does not match the confirm password.</p>
-      <input type="submit" class="button" value="Sign Up" [disabled]="!rForm.valid">
+      <input type="submit" class="button" value="Sign up" [disabled]="!rForm.valid">
     </div>
     <div class="form-login">
       <input type="button" class="button" value="Login">

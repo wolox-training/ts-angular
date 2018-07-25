@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserComponent } from '../user/user.component';
+import { User } from '../user/user';
 import { ConfirmPassword } from '../custom-validations/confirm.password'
 
 @Component({
@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addPost(post) {
-    let user = new UserComponent(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
+    let user = new User(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
     console.log(JSON.stringify({user: user}));
   }
 }
