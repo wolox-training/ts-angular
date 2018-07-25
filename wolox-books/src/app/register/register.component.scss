@@ -1,0 +1,27 @@
+$gray: #f2f2f2;
+$form-width: 350px;
+$light-blue: #33bbff;
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $form-width;
+  background-color: $gray;
+  border-top: 5px solid $light-blue;
+  padding-top: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .header-logo {
+    width: 300px;
+  }
+}

@@ -11,7 +11,6 @@ import { ConfirmPassword } from '../custom-validations/confirm.password'
 
 export class RegisterComponent implements OnInit {
   rForm: FormGroup;
-  post: any;
   fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder) {

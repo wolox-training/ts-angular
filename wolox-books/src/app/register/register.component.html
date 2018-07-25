@@ -1,8 +1,9 @@
-
 <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
-  <div  class="form-container">
-    <div clas="row-columns">
-      <h1>Books</h1>
+  <div class="form-container">
+      <header class="header">
+        <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
+        <h1 class="header-title">Books</h1>
+      </header>
       <label>First Name
         <input type="text" formControlName="firstName">
       </label>
@@ -25,6 +26,5 @@
       <div class="alert" *ngIf="rForm.controls.confirmPassword.errors?.MatchPassword && rForm.controls['confirmPassword'].touched">Password does not match the confirm password.</div>
       <input type="submit" class="button expanded" value="Sign Up" [disabled]="!rForm.valid">
       <input type="button" class="button expanded" value="Sign In">
-    </div>
   </div>
 </form>
