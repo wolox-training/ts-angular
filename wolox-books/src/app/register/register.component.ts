@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../components/user/user';
-import { ConfirmPassword } from '../../components/custom-validations/confirm.password'
-import { UserService } from '../../components/user/user.service';
+import { User } from '../user/user';
+import { ConfirmPassword } from '../custom-validations/confirm.password'
 
 @Component({
   selector: 'app-register',
@@ -14,7 +13,7 @@ export class RegisterComponent implements OnInit {
   rForm: FormGroup;
   fieldRequiredAlert: string = "This field is required.";
 
-  constructor(private fb: FormBuilder, private us: UserService) {
+  constructor(private fb: FormBuilder) {
 
     this.rForm = fb.group({
       'firstName': [null, Validators.required],
@@ -34,6 +33,5 @@ export class RegisterComponent implements OnInit {
   addPost(post) {
     let user = new User(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
     console.log(JSON.stringify({user: user}));
-    this.us.createUser({user: user});
   }
 }
