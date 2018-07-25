@@ -1,6 +1,7 @@
 @import '../../scss/colors';
 @import '../../scss/fonts';
 $form-width: 350px;
+$header-logo-width: 300px;
 
 .form-container {
   display: flex;
@@ -24,6 +25,15 @@ $form-width: 350px;
     border-radius: 5px;
     margin: 5px 0;
   }
+
+  .form-login {
+    border-top: 2px solid $light-grey;
+    width: 100%;
+  }
+
+  .form-signup {
+    width: 100%;
+  }
 }
 
 .header {
@@ -38,17 +48,16 @@ $form-width: 350px;
 
   .header-logo {
     margin-bottom: 10px;
-    width: 300px;
+    width: $header-logo-width;
   }
 }
 
 .alert {
   background: $alert-color;
   padding: 7px;
-  font-size: .9em;
+  font-size: $text-alert;
   margin-bottom: 20px;
   display: inline-block;
-  animation: 2s alertAnim forwards;
 }
 
 .button {
@@ -57,7 +66,7 @@ $form-width: 350px;
   background-color: $green;
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 5px;
   cursor: pointer;
 
@@ -70,13 +79,17 @@ $form-width: 350px;
 
   &:enabled {
     &:hover {
-      background-color: #608000;
+      background-color: $dark-green;
     }
   }
 
   &:active {
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px $green-shadow;
     transform: translateY(5px);
+  }
+
+  &:before {
+    border: 1px solid;
   }
 }
 

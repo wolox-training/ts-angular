@@ -1,30 +1,34 @@
 <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)" class="form">
   <div class="form-container">
-      <header class="header">
-        <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
-        <h1 class="header-title">BOOKS</h1>
-      </header>
-        <label class="form-field">First Name
-          <input type="text" formControlName="firstName" class="form-input">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</div>
-        <label class="form-field">Last Name
-          <input type="text" formControlName="lastName" class="form-input">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</div>
-        <label class="form-field">Email
-          <input type="text" formControlName="email" class="form-input">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Please enter a valid email.</div>
-        <label class="form-field">Password
-          <input type="text" formControlName="password" class="form-input">
-        </label>
-        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</div>
-        <label class="form-field" *ngIf="rForm.controls['password'].valid">Confirm Password
-          <input type="text" formControlName="confirmPassword" class="form-input">
-        </label>
-        <div class="alert" *ngIf="rForm.controls.confirmPassword.errors?.MatchPassword && rForm.controls['confirmPassword'].touched && rForm.controls['password'].valid">Password does not match the confirm password.</div>
-        <input type="submit" class="button" value="Sign Up" [disabled]="!rForm.valid">
-        <input type="button" class="button" value="Login">
+    <header class="header">
+      <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
+      <h1 class="header-title">BOOKS</h1>
+    </header>
+    <div class="form-signup">
+      <label class="form-field">First Name
+        <input type="text" formControlName="firstName" class="form-input">
+      </label>
+      <p class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</p>
+      <label class="form-field">Last Name
+        <input type="text" formControlName="lastName" class="form-input">
+      </label>
+      <p class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</p>
+      <label class="form-field">Email
+        <input type="text" formControlName="email" class="form-input">
+      </label>
+      <p class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Please enter a valid email.</p>
+      <label class="form-field">Password
+        <input type="password" formControlName="password" class="form-input">
+      </label>
+      <p class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password must contain at least 8 characters.</p>
+      <label class="form-field" *ngIf="rForm.controls['password'].valid">Confirm Password
+        <input type="password" formControlName="confirmPassword" class="form-input">
+      </label>
+      <p class="alert" *ngIf="rForm.controls.confirmPassword.errors?.MatchPassword && rForm.controls['confirmPassword'].touched && rForm.controls['password'].valid">Password does not match the confirm password.</p>
+      <input type="submit" class="button" value="Sign Up" [disabled]="!rForm.valid">
+    </div>
+    <div class="form-login">
+      <input type="button" class="button" value="Login">
+    </div>
   </div>
 </form>
