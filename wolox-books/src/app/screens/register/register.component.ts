@@ -8,9 +8,9 @@ import { ConfirmPassword } from '../../components/custom-validations/confirm.pas
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   registerForm: FormGroup;
-  fieldRequiredAlert: string = "This field is required.";
+  const fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder) {
     this.registerForm = fb.group({
@@ -18,23 +18,15 @@ export class RegisterComponent implements OnInit {
       'lastName': [null, Validators.required],
       'email': [null, Validators.compose([Validators.required, Validators.email])],
       'password': [null, Validators.compose([Validators.required, Validators.minLength(8)])],
-      'confirmPassword': [null, Validators.required]
+      'confirmPassword': [null, Validators.required],
+      'locale': ["en"]
     },
     {
        validator: ConfirmPassword.MatchPassword
     })
   }
 
-  addPost(post) {
-    let user: User = {
-      firstName: post.firstName,
-      lastName: post.lastName,
-      email: post.email,
-      password: post.password,
-      confirmPassword: post.confirmPassword,
-      locale: "en"
-    }
-    
-    console.log(JSON.stringify({ user: user }));
+  registerUser() {
+    console.log(JSON.stringify({ user: this.registerForm.value }));
   }
 }

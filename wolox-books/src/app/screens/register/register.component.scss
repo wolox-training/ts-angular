@@ -61,7 +61,7 @@ $button-height: 40px;
   display: inline-block;
 }
 
-.button {
+.button-reg {
   font-size: $text-medium;
   color: white;
   background-color: $green;
@@ -86,14 +86,7 @@ $button-height: 40px;
   }
 }
 
-.buttons {
+.login {
   width: 100%;
-
-  .buttons-elem {
-    border-bottom: 2px solid $light-grey;
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
+  border-top: 2px solid $light-grey;
 }
