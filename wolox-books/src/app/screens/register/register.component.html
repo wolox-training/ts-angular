@@ -1,4 +1,4 @@
-<form [formGroup]="registerForm" (ngSubmit)="addPost(registerForm.value)" class="form-container" novalidate>
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="form-container" novalidate>
   <header class="header">
     <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
     <h1 class="header-title">BOOKS</h1>
@@ -19,9 +19,9 @@
     <label class="form-field" *ngIf="registerForm.controls['password'].valid">Confirm Password</label>
     <input type="password" formControlName="confirmPassword" class="form-input" *ngIf="registerForm.controls['password'].valid">
     <p class="alert" *ngIf="registerForm.controls.confirmPassword.errors?.MatchPassword && registerForm.controls['confirmPassword'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
+    <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
   </div>
-  <ul class="buttons">
-    <li class="buttons-elem"><button type="submit" class="button" [disabled]="!registerForm.valid">Sign up</button></li>
-    <li class="buttons-elem"><button type="button" class="button">Login</button></li>
-  </ul>
+  <div class="login">
+    <button type="button" class="button-reg">Login</button>
+  </div>
 </form>
