@@ -15,11 +15,11 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder, private userService: UserService) {
     this.registerForm = fb.group({
-      'firstName': [null, Validators.required],
-      'lastName': [null, Validators.required],
+      'first_name': [null, Validators.required],
+      'last_name': [null, Validators.required],
       'email': [null, Validators.compose([Validators.required, Validators.email])],
       'password': [null, Validators.compose([Validators.required, Validators.minLength(8)])],
-      'confirmPassword': [null, Validators.required],
+      'confirm_password': [null, Validators.required],
       'locale': ["en"]
     },
     {
@@ -28,7 +28,8 @@ export class RegisterComponent {
   }
 
   registerUser() {
-    console.log(JSON.stringify({ user: this.registerForm.value }));
-    this.userService.createUser({ user: this.registerForm.value });
+    const userJson = JSON.stringify({ user: this.registerForm.value });
+    console.log(userJson);
+    this.userService.createUser(userJson);
   }
 }
