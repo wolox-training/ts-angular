@@ -9,14 +9,12 @@ import { UserService } from '../../components/user/user.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-
 export class RegisterComponent implements OnInit {
-  rForm: FormGroup;
+  registerForm: FormGroup;
   fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder, private us: UserService) {
-
-    this.rForm = fb.group({
+    this.registerForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
       'email': [null, Validators.compose([Validators.required, Validators.email])],
@@ -28,12 +26,15 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-  }
-
   addPost(post) {
-    let user = new User(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
-    console.log(JSON.stringify({user: user}));
+    let user: User = {
+      firstName: post.firstName,
+      lastName: post.lastName,
+      email: post.email,
+      password: post.password,
+      confirmPassword: post.confirmPassword
+    }
+    console.log(JSON.stringify({ user: user }));
     this.us.createUser({user: user});
   }
 }
