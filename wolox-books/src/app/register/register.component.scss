@@ -2,6 +2,7 @@
 @import '../../scss/fonts';
 $form-width: 350px;
 $header-logo-width: 300px;
+$button-height: 40px;
 
 .form-container {
   display: flex;
@@ -14,7 +15,7 @@ $header-logo-width: 300px;
   margin: auto;
 
   .form-field {
-    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: $text-small;
     font-family: $lato;
     display: flex;
@@ -28,11 +29,6 @@ $header-logo-width: 300px;
     border-radius: 5px;
     margin: 5px 0;
     font-family: $lato;
-  }
-
-  .form-login {
-    border-top: 2px solid $light-grey;
-    width: 100%;
   }
 
   .form-signup {
@@ -62,7 +58,6 @@ $header-logo-width: 300px;
   background: $alert-color;
   padding: 7px;
   font-size: $text-alert;
-  margin-bottom: 20px;
   display: inline-block;
 }
 
@@ -76,6 +71,7 @@ $header-logo-width: 300px;
   border-radius: 5px;
   cursor: pointer;
   font-family: $lato;
+  height: $button-height;
 
   &:disabled {
     border: 2px solid $green;
@@ -90,7 +86,14 @@ $header-logo-width: 300px;
   }
 }
 
-.form {
-  display: flex;
-  justify-content: center;
+.buttons {
+  width: 100%;
+
+  .buttons-elem {
+    border-bottom: 2px solid $light-grey;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
