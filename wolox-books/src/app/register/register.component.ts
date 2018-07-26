@@ -8,13 +8,11 @@ import { ConfirmPassword } from '../custom-validations/confirm.password'
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder) {
-
     this.registerForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
@@ -27,11 +25,14 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-  }
-
   addPost(post) {
-    let user = new User(post.firstName, post.lastName, post.email, post.password, post.confirmPassword);
-    console.log(JSON.stringify({user: user}));
+    let user: User = {
+      firstName: post.firstName,
+      lastName: post.lastName,
+      email: post.email,
+      password: post.password,
+      confirmPassword: post.confirmPassword
+    }
+    console.log(JSON.stringify({ user: user }));
   }
 }

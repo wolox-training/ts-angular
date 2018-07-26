@@ -4,7 +4,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
-    path: '';
+    path: 'sign-in';
     component: RegisterComponent
   }
 ];
