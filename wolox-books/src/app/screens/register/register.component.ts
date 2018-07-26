@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   fieldRequiredAlert: string = "This field is required.";
 
-  constructor(private fb: FormBuilder, private us: UserService) {
+  constructor(private fb: FormBuilder, private userService: UserService) {
     this.registerForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
@@ -35,8 +35,8 @@ export class RegisterComponent implements OnInit {
       confirmPassword: post.confirmPassword,
       locale: "en"
     }
-    
+
     console.log(JSON.stringify({ user: user }));
-    this.us.createUser({ user: user });
+    this.userService.createUser({ user: user });
   }
 }
