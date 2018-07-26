@@ -8,7 +8,7 @@ import { ConfirmPassword } from '../custom-validations/confirm.password'
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   registerForm: FormGroup;
   fieldRequiredAlert: string = "This field is required.";
 
@@ -25,8 +25,8 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  addPost(post) {
-    let user: User = {
+  registerUser(post) {
+    const user: User = {
       firstName: post.firstName,
       lastName: post.lastName,
       email: post.email,
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
       confirmPassword: post.confirmPassword,
       locale: "en"
     }
-    
+
     console.log(JSON.stringify({ user: user }));
   }
 }
