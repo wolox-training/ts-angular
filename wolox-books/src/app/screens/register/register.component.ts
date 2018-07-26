@@ -34,7 +34,8 @@ export class RegisterComponent implements OnInit {
       password: post.password,
       confirmPassword: post.confirmPassword
     }
+    
     console.log(JSON.stringify({ user: user }));
-    this.us.createUser({user: user});
+    this.us.createUser({ user: user });
   }
 }
