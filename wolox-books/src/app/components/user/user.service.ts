@@ -9,12 +9,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  createUser(user) {
+  public createUser(user) {
     console.log(user);
-    this.http.post(this.ROOT_URL + "/users", user, { headers: new HttpHeaders().set('Content-type', 'application/json') })
-      .subscribe(
-        resp => { console.log('success') },
-        err => { }
-      );
+    return this.http.post(this.ROOT_URL + "/users", user, { headers: new HttpHeaders().set('Content-type', 'application/json') })
   }
 }
