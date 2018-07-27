@@ -6,12 +6,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
   readonly ROOT_URL = 'https://wbooks-api-stage.herokuapp.com/api/v1';
+  private header = { headers: new HttpHeaders().set('Content-type', 'application/json') };
 
   constructor(private http: HttpClient) { }
 
   createUser(user) {
     console.log(user);
-    this.http.post(this.ROOT_URL + "/users", user, { headers: new HttpHeaders().set('Content-type', 'application/json') })
+    this.http.post(this.ROOT_URL + "/users", user, this.header )
       .subscribe(
         resp => { console.log('success') },
         err => { }
