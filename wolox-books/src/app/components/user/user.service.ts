@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  createUser(user){
+  createUser(user) {
     console.log(user);
     this.http.post(this.ROOT_URL + "/users", user, { headers: new HttpHeaders().set('Content-type', 'application/json') })
       .subscribe(
