@@ -28,7 +28,7 @@ $header-logo-width: 300px;
     font-family: $lato;
   }
 
-  .form-signup {
+  .form-main {
     width: 100%;
   }
 }
@@ -48,4 +48,9 @@ $header-logo-width: 300px;
     margin-bottom: 10px;
     width: $header-logo-width;
   }
+}
+
+.form-sec {
+  width: 100%;
+  border-top: 2px solid $light-grey;
 }

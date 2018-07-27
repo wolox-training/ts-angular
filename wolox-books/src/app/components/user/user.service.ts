@@ -15,7 +15,7 @@ export class UserService {
     return this.http.post(this.ROOT_URL + "/users", user, this.header)
   }
 
-  public login(user) {
+  public loginUser(user) {
     return this.http.post(this.ROOT_URL + "/users/sessions", user, this.header)
   }
 }

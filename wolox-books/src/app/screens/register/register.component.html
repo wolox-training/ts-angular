@@ -3,7 +3,7 @@
     <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
     <h1 class="header-title">BOOKS</h1>
   </header>
-  <div class="form-signup">
+  <div class="form-main">
     <label class="form-field">First name</label>
     <input type="text" formControlName="first_name" class="form-input">
     <p class="alert" *ngIf="!registerForm.controls['first_name'].valid && registerForm.controls['first_name'].touched">{{ fieldRequiredAlert }}</p>
@@ -21,7 +21,7 @@
     <p class="alert" *ngIf="registerForm.controls.confirm_password.errors?.MatchPassword && registerForm.controls['confirm_password'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
     <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
   </div>
-  <div class="login">
+  <div class="form-sec">
     <button type="button" class="button-reg" (click)="goTo('login')">Login</button>
   </div>
 </form>
