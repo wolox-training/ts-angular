@@ -4,7 +4,7 @@ import { RegisterComponent } from './screens/register/register.component';
 
 const routes: Routes = [
   {
-    path: 'sign-in';
+    path: 'sign-up';
     component: RegisterComponent
   }
 ];
