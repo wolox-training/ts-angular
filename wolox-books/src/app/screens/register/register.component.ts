@@ -34,13 +34,13 @@ export class RegisterComponent {
     .subscribe(
       resp => {
         console.log('success');
-        this.goTo('login');
+        goTo('login');
       },
       err => { }
     );
   }
 
   goTo(route: string){
-    this.router.navigate([route]);
+      this.router.navigate([route]);
   }
 }

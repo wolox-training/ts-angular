@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../components/user/user';
 import { UserService } from '../../components/user/user.service';
+import { Utils } from '../../components/utils/utils';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,16 +23,15 @@ export class LoginComponent implements OnInit {
   loginUser() {
     const userJson = JSON.stringify({ session: this.loginForm.value });
     this.userService.loginUser(userJson)
-    .subscribe(
+      .subscribe(
       resp => {
-        console.log(resp[0]);
+        console.log(resp['access_token']);
       },
       err => { }
     );
   }
 
   goTo(route: string){
-    this.router.navigate([route]);
+      this.router.navigate([route]);
   }
-
 }
