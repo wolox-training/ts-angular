@@ -1,0 +1,26 @@
+$button-height: 40px;
+
+.button-reg {
+  font-size: $text-medium;
+  color: white;
+  background-color: $green;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $lato;
+  height: $button-height;
+
+  &:disabled {
+    border: 2px solid $green;
+    color: $green;
+    background-color: white;
+    cursor: not-allowed;
+  }
+
+  &:active {
+    box-shadow: 0 5px $green-shadow;
+    transform: translateY(5px);
+  }
+}

@@ -1,0 +1,51 @@
+$form-width: 350px;
+$header-logo-width: 300px;
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: $form-width;
+  background-color: $grey;
+  border-top: 5px solid $blue;
+  padding: 20px;
+  margin: auto;
+
+  .form-field {
+    margin-top: 10px;
+    font-size: $text-small;
+    font-family: $lato;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-family: $lato;
+  }
+
+  .form-signup {
+    width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .header-title {
+    font-family: $lato;
+    font-size: $text-medium;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+    width: $header-logo-width;
+  }
+}
