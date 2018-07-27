@@ -22,6 +22,6 @@
     <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
   </div>
   <div class="login">
-    <button type="button" class="button-reg">Login</button>
+    <button type="button" class="button-reg" (click)="goTo('login')">Login</button>
   </div>
 </form>
