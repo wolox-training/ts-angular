@@ -11,4 +11,12 @@ $nav-height: 50px;
   left: 0;
   background-color: white;
   border-top: 5px solid $blue;
+
+  .header {
+    height: 100%;
+    &::before {
+
+      height: 100%;
+    }
+  }
 }
