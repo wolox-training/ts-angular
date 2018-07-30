@@ -21,11 +21,6 @@ export class LoginComponent {
 
   loginUser() {
     this.userService.loginUser({ session: this.loginForm.value })
-    .subscribe(
-      resp => {
-        console.log(resp['access_token']);
-      },
-      err => { }
-    );
+    .subscribe(resp => { console.log(resp['access_token']) });
   }
 }
