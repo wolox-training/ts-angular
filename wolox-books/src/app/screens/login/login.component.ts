@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
@@ -27,9 +27,5 @@ export class LoginComponent implements OnInit {
       },
       err => { }
     );
-  }
-
-  goTo(route: string){
-      this.router.navigate([route]);
   }
 }
