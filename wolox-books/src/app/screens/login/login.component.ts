@@ -26,8 +26,7 @@ export class LoginComponent {
       resp => {
         this.localStorage.setValue('access_token', resp['access_token']);
         this.router.navigate(['auth']);
-      },
-      err => { }
+      }
     );
   }
 }
