@@ -10,10 +10,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  createUser(user) {
-    return this.http.post(`${this.ROOT_URL}/users`, user, this.header);
+  public createUser(user) {
+    return this.http.post(this.ROOT_URL + "/users", user, this.header)
   }
 
   public loginUser(user) {
-    return this.http.post(`${this.ROOT_URL}/users/sessions`, user, this.header)
+    return this.http.post(this.ROOT_URL + "/users/sessions", user, this.header)
+  }
 }
