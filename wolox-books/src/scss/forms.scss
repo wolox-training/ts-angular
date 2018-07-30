@@ -13,7 +13,6 @@ $form-width: 350px;
   .form-field {
     margin-top: 10px;
     font-size: $text-small;
-    font-family: $lato;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -21,18 +20,13 @@ $form-width: 350px;
 
   .form-input {
     width: 100%;
-    padding: 7px;
+    padding: 5px;
     border-radius: 5px;
     margin: 5px 0;
-    font-family: $lato;
   }
 
   .form-main {
     width: 100%;
+    border-bottom: 2px solid $light-grey;
   }
-}
-
-.form-sec {
-  width: 100%;
-  border-top: 2px solid $light-grey;
 }

@@ -1,5 +1,5 @@
 <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="form-container" novalidate>
-  <h1 class="header">BOOKS</h1>
+  <h1 class="title-main">BOOKS</h1>
   <div class="form-main">
     <label class="form-field">First name</label>
     <input type="text" formControlName="first_name" class="form-input">
@@ -16,9 +16,7 @@
     <label class="form-field" *ngIf="registerForm.controls['password'].valid">Confirm Password</label>
     <input type="password" formControlName="confirm_password" class="form-input" *ngIf="registerForm.controls['password'].valid">
     <p class="alert" *ngIf="registerForm.controls.confirm_password.errors?.MatchPassword && registerForm.controls['confirm_password'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
-    <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
+    <button type="submit" class="btn-main" [disabled]="!registerForm.valid">Sign up</button>
   </div>
-  <div class="form-sec">
-    <a class="button-reg" href='login'>Login</a>
-  </div>
+  <a class="btn-main" href='login'>Login</a>
 </form>

@@ -1,6 +1,6 @@
 $button-height: 40px;
 
-.button-reg {
+.btn-main {
   font-size: $text-medium;
   color: white;
   background-color: $green;
@@ -9,7 +9,6 @@ $button-height: 40px;
   margin: 20px 0;
   border-radius: 5px;
   cursor: pointer;
-  font-family: $lato;
   height: $button-height;
   display: flex;
   justify-content: center;
