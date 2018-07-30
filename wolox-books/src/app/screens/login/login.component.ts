@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       resp => {
         console.log(resp['access_token']);
         this.localStorage.setValue('access_token', resp['access_token']);
+        this.goTo('auth');
       },
       err => { }
     );
