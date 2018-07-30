@@ -28,7 +28,10 @@ export class RegisterComponent {
   }
 
   registerUser() {
-    const userJson = JSON.stringify({ user: this.registerForm.value });
-    this.userService.createUser(userJson);
+    this.userService.createUser({ user: this.registerForm.value })
+    .subscribe(
+      resp => { console.log('success') },
+      err => { }
+    );
   }
 }
