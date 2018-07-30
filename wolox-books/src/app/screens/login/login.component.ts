@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    const userJson = JSON.stringify({ session: this.loginForm.value });
-    this.userService.loginUser(userJson)
+    this.userService.loginUser({ session: this.loginForm.value })
     .subscribe(
       resp => {
         console.log(resp['access_token']);
