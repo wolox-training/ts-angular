@@ -29,18 +29,16 @@ export class RegisterComponent {
   }
 
   registerUser() {
-    const userJson = JSON.stringify({ user: this.registerForm.value });
-    this.userService.createUser(userJson)
+    this.userService.createUser({ user: this.registerForm.value })
     .subscribe(
       resp => {
-        console.log('success');
-        this.goTo('login');
+         console.log('success');
+         this.goTo('login');
       },
       err => { }
     );
   }
 
-  goTo(route: string) {
-      this.router.navigate([route]);
-  }
+  goTo(route: string){
+    this.router.navigate([route]);
 }
