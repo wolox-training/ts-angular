@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  createUser(user) {
+  public createUser(user): Observable<Response> {
     const CreateUserJson = this.buildCreateJson(user);
     return this.http.post(`${this.ROOT_URL}/users`, CreateUserJson, this.header);
   }
