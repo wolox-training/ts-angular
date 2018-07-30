@@ -7,16 +7,20 @@ $nav-height: 50px;
   height: $nav-height;
   padding: 5px;
   box-shadow: 0 8px 5px -5px $grey;
-  top: 0;
-  left: 0;
   background-color: white;
   border-top: 5px solid $blue;
 
-  .header {
-    height: 100%;
-    &::before {
+  .title-main {
+    font-size: $text-very-small;
 
-      height: 100%;
+    &::before{
+      margin: 0;
+      width: 150px;
     }
+  }
+
+  .btn-logout {
+    font: $text-medium;
+    font-weight: bold;
   }
 }
