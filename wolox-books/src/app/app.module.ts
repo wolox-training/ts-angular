@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './screens/register/register.component';
 import { LoginComponent } from './screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
+import { LocalStorageService } from './components/local-storage/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AuthComponent } from './screens/auth/auth.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
