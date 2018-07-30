@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: $lato;
+  font-size: $text-medium;
+
+  &::before {
+    content: url(assets/wolox_logo.svg);
+    margin-bottom: 10px;
+    width: $header-logo-width;
+  }
+}
