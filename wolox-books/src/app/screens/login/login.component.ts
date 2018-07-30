@@ -10,7 +10,7 @@ import { LocalStorageService } from '../../components/local-storage/local-storag
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private localStorage: LocalStorageService) {
@@ -30,9 +30,5 @@ export class LoginComponent implements OnInit {
       },
       err => { }
     );
-  }
-
-  goTo(route: string){
-      this.router.navigate([route]);
   }
 }
