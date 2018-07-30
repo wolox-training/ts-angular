@@ -14,7 +14,6 @@ $header-logo-width: 300px;
   .form-field {
     margin-top: 10px;
     font-size: $text-small;
-    font-family: $lato;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -25,7 +24,6 @@ $header-logo-width: 300px;
     padding: 7px;
     border-radius: 5px;
     margin: 5px 0;
-    font-family: $lato;
   }
 
   .form-main {
