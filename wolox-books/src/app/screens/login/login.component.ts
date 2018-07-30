@@ -20,13 +20,12 @@ export class LoginComponent {
     }
   }
 
-  loginUser() {
+  private loginUser() {
     this.userService.loginUser({ session: this.loginForm.value })
     .subscribe(
       resp => {
-        console.log(resp['access_token']);
         this.localStorage.setValue('access_token', resp['access_token']);
-        this.router.navigate(['auth']);;
+        this.router.navigate(['auth']);
       },
       err => { }
     );
