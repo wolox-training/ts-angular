@@ -29,9 +29,6 @@ export class RegisterComponent {
 
   registerUser() {
     this.userService.createUser({ user: this.registerForm.value })
-    .subscribe(
-      resp => { console.log('success') },
-      err => { }
-    );
+    .subscribe(resp => { console.log('success') });
   }
 }
