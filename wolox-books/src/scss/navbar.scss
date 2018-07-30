@@ -4,7 +4,7 @@ $nav-height: 50px;
   display: flex;
   align-content: flex-start;
   justify-content: space-around;
-  height: $nav-height;
+  max-height: $nav-height;
   padding: 5px;
   box-shadow: 0 8px 5px -5px $grey;
   background-color: white;
