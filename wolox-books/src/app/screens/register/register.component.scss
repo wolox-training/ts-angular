@@ -72,6 +72,9 @@ $button-height: 40px;
   cursor: pointer;
   font-family: $lato;
   height: $button-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:disabled {
     border: 2px solid $green;

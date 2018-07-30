@@ -32,13 +32,9 @@ export class RegisterComponent {
     this.userService.createUser({ user: this.registerForm.value })
     .subscribe(
       resp => {
-         console.log('success');
-         this.goTo('login');
-      },
+         this.router.navigate(['login']);
+      }
       err => { }
     );
   }
-
-  goTo(route: string){
-    this.router.navigate([route]);
 }
