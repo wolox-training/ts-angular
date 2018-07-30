@@ -26,7 +26,7 @@ export class LoginComponent {
       resp => {
         console.log(resp['access_token']);
         this.localStorage.setValue('access_token', resp['access_token']);
-        this.goTo('auth');
+        this.router.navigate(['auth']);;
       },
       err => { }
     );
