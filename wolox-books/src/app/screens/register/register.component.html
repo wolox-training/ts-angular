@@ -18,7 +18,5 @@
     <p class="alert" *ngIf="registerForm.controls.confirm_password.errors?.MatchPassword && registerForm.controls['confirm_password'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
     <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
   </div>
-  <div class="form-sec">
-    <a class="button-reg" href='login'>Login</a>
-  </div>
+  <a class="button-reg" href='login'>Login</a>
 </form>
