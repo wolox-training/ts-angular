@@ -30,6 +30,6 @@ export class RegisterComponent {
 
   registerUser() {
     this.userService.createUser({ user: this.registerForm.value })
-    .subscribe(resp => { console.log('success') });
+    .subscribe(resp => { this.router.navigate(['login'] });
   }
 }
