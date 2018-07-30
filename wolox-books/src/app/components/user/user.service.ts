@@ -11,10 +11,23 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   public createUser(user): Observable<Response> {
-    return this.http.post(`${this.ROOT_URL}/users`, user, this.header);
+    const CreateUserJson = this.buildCreateJson(user);
+    return this.http.post(`${this.ROOT_URL}/users`, CreateUserJson, this.header);
   }
 
   public loginUser(user): Observable<Response> {
     return this.http.post(`${this.ROOT_URL}/users/sessions`, user, this.header)
+  }
+
+  private buildCreateJson(user) {
+    this.replaceJsonKey(user['user'], 'lastName', 'last_name');
+    this.replaceJsonKey(user['user'], 'firstName','first_name');
+    this.replaceJsonKey(user['user'], 'confirmPassword','confirm_password');
+    return user;
+  }
+
+  private replaceJsonKey(json, a, b) {
+    json[b] = json[a];
+    delete json[a];
   }
 }
