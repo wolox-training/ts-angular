@@ -5,6 +5,7 @@ import { LoginComponent } from './screens/unauth/screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
+import { AuthGuard } from './screens/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
   {
     path: '',
     component: AuthComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'books',
