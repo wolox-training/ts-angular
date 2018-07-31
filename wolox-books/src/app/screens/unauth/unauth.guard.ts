@@ -11,7 +11,7 @@ export class UnauthGuard implements CanActivate {
 
   constructor(private userService: UserService, private router: Router) {  }
 
-  canActivate() {
+  public canActivate() {
     if(this.userService.loggedIn()){
       this.router.navigate(['books']);
       return false;
