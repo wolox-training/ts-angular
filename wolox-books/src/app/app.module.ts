@@ -15,6 +15,7 @@ import { BookListComponent } from './screens/auth/screens/book-list/book-list.co
 import { AuthGuard } from './screens/auth/auth.guard';
 import { UnauthGuard } from './screens/unauth/unauth.guard';
 import { TokenInterceptorService } from './components/token-interceptor/token-interceptor.service';
+import { BooksService } from './screens/auth/screens/book-list/components/books-service/books.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { TokenInterceptorService } from './components/token-interceptor/token-in
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService, LocalStorageService, AuthGuard, UnauthGuard,
+  providers: [UserService, LocalStorageService, AuthGuard, UnauthGuard, BooksService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
