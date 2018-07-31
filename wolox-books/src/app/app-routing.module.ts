@@ -6,11 +6,13 @@ import { AuthComponent } from './screens/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
 import { AuthGuard } from './screens/auth/auth.guard';
+import { UnauthGuard } from './screens/unauth/unauth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: UnauthComponent,
+    canActivate: [UnauthGuard],
     children: [
       {
         path: 'sign-up',
