@@ -12,7 +12,7 @@ export class AuthComponent {
   constructor(private localStorage: LocalStorageService, private router: Router) { }
 
   private logOut() {
-    this.localStorage.removeValue('access_token');
+    this.localStorage.removeValue('accessToken');
     this.router.navigate(['']);
   }
 

@@ -24,7 +24,7 @@ export class LoginComponent {
     this.userService.loginUser({ session: this.loginForm.value })
     .subscribe(
       resp => {
-        this.localStorage.setValue('access_token', resp['access_token']);
+        this.localStorage.setValue('accessToken', resp['access_token']);
         this.router.navigate(['auth']);
       }
     );
