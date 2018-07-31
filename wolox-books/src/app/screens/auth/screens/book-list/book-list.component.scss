@@ -1,25 +1,24 @@
-$book-size: 200px;
-$book-img-size: 100px;
+$book-width: 220px;
+$book-height: 260px;
 
 .books {
-  margin: 100px 300px;
+  margin: 50px 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
 
   .book {
     margin: 20px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: $book-size;
-    height: $book-size;
-    padding: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: $book-width;
+    height: $book-height;
+    padding: 15px;
 
     .book-title {
-      font-size: 20px;
+      font-size: 15px;
     }
 
     .book-author {
@@ -27,9 +26,9 @@ $book-img-size: 100px;
     }
 
     .book-img {
-
-      width: $book-img-size;
-      height: $book-img-size;
+      margin-bottom: 15px;
+      width: 100%;
+      height: 170px;
     }
   }
 }
