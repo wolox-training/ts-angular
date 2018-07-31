@@ -10,13 +10,17 @@ import { RegisterComponent } from './screens/register/register.component';
 import { LoginComponent } from './screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
 import { LocalStorageService } from './components/local-storage/local-storage.service';
+import { UnauthComponent } from './screens/unauth/unauth.component';
+import { BookListComponent } from './screens/auth/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AuthComponent
+    AuthComponent,
+    UnauthComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
