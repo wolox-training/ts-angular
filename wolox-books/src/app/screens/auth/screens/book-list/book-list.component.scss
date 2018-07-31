@@ -1,9 +1,11 @@
-$book-size: 150px;
+$book-size: 200px;
+$book-img-size: 100px;
 
 .books {
   margin: 100px 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
 
   .book {
     margin: 20px;
@@ -11,8 +13,10 @@ $book-size: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     width: $book-size;
     height: $book-size;
+    padding: 5px;
 
     .book-title {
       font-size: 20px;
@@ -22,5 +26,10 @@ $book-size: 150px;
       font-size: 10px;
     }
 
+    .book-img {
+
+      width: $book-img-size;
+      height: $book-img-size;
+    }
   }
 }
