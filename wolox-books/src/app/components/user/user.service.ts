@@ -32,8 +32,12 @@ export class UserService {
     delete json[a];
   }
 
-  public loggedIn(){
+  public loggedIn() {
     return !!this.localStorage.getValue('accessToken');
+  }
+
+  public getAccessToken(){
+    return this.localStorage.getValue('accessToken');
   }
 
 }
