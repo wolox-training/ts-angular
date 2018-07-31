@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../components/user/user';
-import { ConfirmPassword } from '../../components/custom-validations/confirm.password'
-import { UserService } from '../../components/user/user.service';
+import { User } from '../../../../components/user/user';
+import { ConfirmPassword } from '../../../../components/custom-validations/confirm.password'
+import { UserService } from '../../../../components/user/user.service';
 import { Router } from '@angular/router';
 
 @Component({
