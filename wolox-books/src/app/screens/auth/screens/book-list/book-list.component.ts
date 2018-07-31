@@ -7,6 +7,7 @@ import { BooksService } from './components/books-service/books.service'
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
+  books = [];
 
   constructor(private booksService: BooksService) { }
 
@@ -17,9 +18,8 @@ export class BookListComponent implements OnInit {
   private getBooks() {
     this.booksService.getBooks()
     .subscribe( res => {
-      console.log(res);
+      this.books = res;
+      console.log(this.books);
     });
   }
-
-
 }
