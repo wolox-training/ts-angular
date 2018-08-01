@@ -7,17 +7,16 @@ import { LocalStorageService } from '../local-storage/local-storage.service';
 })
 export class UserService {
   readonly ROOT_URL = 'https://wbooks-api-stage.herokuapp.com/api/v1';
-  private header = { headers: new HttpHeaders().set('Content-type', 'application/json') };
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
   public createUser(user): Observable<Response> {
     const CreateUserJson = this.buildCreateJson(user);
-    return this.http.post(`${this.ROOT_URL}/users`, CreateUserJson, this.header);
+    return this.http.post(`${this.ROOT_URL}/users`, CreateUserJson);
   }
 
   public loginUser(user): Observable<Response> {
-    return this.http.post(`${this.ROOT_URL}/users/sessions`, user, this.header)
+    return this.http.post(`${this.ROOT_URL}/users/sessions`, user)
   }
 
   private buildCreateJson(user) {
