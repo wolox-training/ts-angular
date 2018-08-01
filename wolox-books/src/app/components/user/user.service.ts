@@ -15,9 +15,9 @@ export class UserService {
   }
 
   public loginUser(user): Observable<Response> {
-    return this.http.post(`${this.ROOT_URL}/users/sessions`, user, this.header)
+    return this.http.post(`${this.ROOT_URL}/users/sessions`, user)
   }
-  
+
   private buildCreateJson(user) {
     this.replaceJsonKey(user['user'], 'lastName', 'last_name');
     this.replaceJsonKey(user['user'], 'firstName','first_name');
