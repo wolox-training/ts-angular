@@ -2,15 +2,30 @@
 
 .book {
   display: flex;
-  flex-direction: row;
   background-color: white;
   height: 400px;
   width: 1000px;
   margin: 150px;
   box-shadow: 8px 8px 5px -5px $light-grey;
+  padding: 30px 20px;
+
+  .book-img {
+    height: 100%;
+    width: 300px;
+    margin-right: 20px;
+  }
 
   .info {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+
+    .title {
+      font-size: 30px;
+
+      .genre {
+        font-size: 20px;
+      }
+    }
   }
 }

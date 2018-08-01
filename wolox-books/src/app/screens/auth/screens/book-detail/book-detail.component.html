@@ -2,10 +2,10 @@
   <img [src]="book.image_url" class="book-img" alt="Book cover">
   <div class="info">
     <h1 class="title">{{ book.title }}
-      <p>({{ book.genre }})</p>
+      <p class="genre">({{ book.genre }})</p>
     </h1>
-    <p class="author">{{ book.author }}</p>
-    <p class="publisher">{{ book.publisher }}</p>
-    <p class="year">{{ book.year }}</p>
+    <h2>Book author: </h2>{{ book.author }}
+    <h2>Publisher: </h2>{{ book.publisher }}
+    <h2>Year of publication: </h2>{{ book.year }}
   </div>
 </div>
