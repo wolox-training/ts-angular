@@ -1,7 +1,7 @@
 <div class="books">
-  <div class="book" *ngFor="let book of books">
+  <a class="book" *ngFor="let book of books" href="/books/{{book.id}}">
     <img [src]="book.image_url" class="book-img" alt="Book cover">
     <h1 class="book-title">{{ book.title }}</h1>
     <p class="book-author">{{ book.author }}</p>
-  </div>
+  </a>
 </div>
