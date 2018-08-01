@@ -5,10 +5,15 @@ $nav-height: 50px;
   align-content: flex-start;
   justify-content: space-around;
   max-height: $nav-height;
-  padding: 5px;
-  box-shadow: 0 8px 5px -5px $grey;
+  padding: 4px;
+  box-shadow: 0 8px 5px -5px $light-grey;
   background-color: white;
   border-top: 5px solid $blue;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
 
   .title-main {
     font-size: $text-very-small;
