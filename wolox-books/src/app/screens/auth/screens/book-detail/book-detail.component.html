@@ -1,7 +1,11 @@
 <div class="book">
-  {{ book.title }}
-  {{ book.genre }}
-  {{ book.author }}
-  {{ book.publisher }}
-  {{ book.year }}
+  <h1 class="title">{{ book.title }}
+    <p>({{ book.genre }})</p>
+  </h1>
+  <br>
+  <p class="details">
+    Book author: {{ book.author }}<br>
+    Publisher: {{ book.publisher }}<br>
+    Years of publication: {{ book.year }}
+  </p>
 </div>
