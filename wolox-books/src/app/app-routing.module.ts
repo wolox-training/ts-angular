@@ -30,12 +30,12 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'books',
     component: AuthComponent,
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'books',
+        path: '',
         component: BookListComponent
       }
     ]
