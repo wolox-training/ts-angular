@@ -15,7 +15,7 @@ import { BookListComponent } from './screens/auth/screens/book-list/book-list.co
 import { AuthGuard } from './screens/auth/auth.guard';
 import { UnauthGuard } from './screens/unauth/unauth.guard';
 import { TokenInterceptorService } from './components/token-interceptor/token-interceptor.service';
-import { BooksService } from './screens/auth/screens/book-list/components/books-service/books.service';
+import { BooksService } from './screens/auth/components/books-service/books.service';
 import { BookDetailComponent } from './screens/auth/screens/book-detail/book-detail.component';
 
 @NgModule({
