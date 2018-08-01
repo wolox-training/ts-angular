@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { LocalStorageService } from '../../../../../../components/local-storage/local-storage.service';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class BooksService {
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
-  public getBooks(): Observable<Response> {
-    return this.http.get(`${this.ROOT_URL}/books`);
+  public getBooks(id = ""): Observable<Response> {
+    return this.http.get(`${this.ROOT_URL}/books/${id}`);
   }
 }
