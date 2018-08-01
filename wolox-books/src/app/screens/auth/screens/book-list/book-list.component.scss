@@ -1,12 +1,13 @@
 @import '../../../../../scss/colors';
+@import '../../../../../scss/fonts';
 
 $book-width: 220px;
 $book-height: 260px;
 
 .books {
-  margin: 50px 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 100px 300px;
+  display: flex;
+  flex-wrap: wrap;
 
   .book {
     margin: 20px;
@@ -21,12 +22,13 @@ $book-height: 260px;
     box-shadow: 8px 8px 5px -5px $light-grey;
 
     .book-title {
-      font-size: 15px;
+      font-size: $text-medium;
       margin-bottom: 5px;
+      font-weight: bold;
     }
 
     .book-author {
-      font-size: 10px;
+      font-size: $text-very-small;
     }
 
     .book-img {
