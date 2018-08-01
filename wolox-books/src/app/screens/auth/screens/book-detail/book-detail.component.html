@@ -1,11 +1,11 @@
 <div class="book">
-  <h1 class="title">{{ book.title }}
-    <p>({{ book.genre }})</p>
-  </h1>
-  <br>
-  <p class="details">
-    Book author: {{ book.author }}<br>
-    Publisher: {{ book.publisher }}<br>
-    Years of publication: {{ book.year }}
-  </p>
+  <img *ngIf="book.image_url" [src]="book.image_url" class="book-img" alt="Book cover">
+  <div class="info">
+    <h1 class="title">{{ book.title }}
+      <p>({{ book.genre }})</p>
+    </h1>
+    <p class="author">{{ book.author }}</p>
+    <p class="publisher">{{ book.publisher }}</p>
+    <p class="year">{{ book.year }}</p>
+  </div>
 </div>
