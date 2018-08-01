@@ -18,13 +18,21 @@
   .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+
     .title {
       font-size: 30px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $green;
 
       .genre {
         font-size: 20px;
       }
+    }
+
+    .subtitle {
+      margin-bottom: 10px;
     }
   }
 }
