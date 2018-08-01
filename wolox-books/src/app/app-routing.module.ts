@@ -31,19 +31,17 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'books',
     component: AuthComponent,
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'books',
+        path: '',
         component: BookListComponent,
-        children: [
-          {
-            path: ':id',
-            component: BookDetailComponent
-          }
-        ]
+      },
+      {
+        path: ':id',
+        component: BookDetailComponent
       }
     ]
   }
