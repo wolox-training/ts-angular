@@ -13,8 +13,8 @@ $book-height: 260px;
     margin: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-around;
+    max-width: $book-width;
     width: $book-width;
     height: $book-height;
     padding: 15px;
@@ -23,7 +23,6 @@ $book-height: 260px;
 
     .book-title {
       font-size: $text-medium;
-      margin-bottom: 5px;
       font-weight: bold;
     }
 

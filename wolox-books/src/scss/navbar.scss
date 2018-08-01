@@ -2,7 +2,7 @@ $nav-height: 50px;
 
 .navbar {
   display: flex;
-  align-content: flex-start;
+  align-content: center;
   justify-content: space-around;
   max-height: $nav-height;
   padding: 4px;
@@ -18,7 +18,7 @@ $nav-height: 50px;
   .title-main {
     font-size: $text-very-small;
 
-    &::before{
+    &::before {
       margin: 0;
       width: 150px;
     }
