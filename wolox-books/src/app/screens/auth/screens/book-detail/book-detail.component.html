@@ -1,17 +1,17 @@
 <div class="book" *ngIf="book.title">
-  <img [src]="book.image_url" class="book-img" alt="Book cover">
+  <img [src]="book.image_url" class="book-img" [alt]="book.title">
   <div class="info">
-    <h1 class="title">{{ book.title }}
-      <p class="genre">({{ book.genre }})</p>
+    <h1 class="book-title">{{ book.title }}
+      <p class="book-genre">({{ book.genre }})</p>
     </h1>
-    <h2 class="subtitle">Book author:
-      <p class="info">{{ book.author }}</p>
+    <h2 class="book-subtitle">Book author:
+      <p class="book-info">{{ book.author }}</p>
     </h2>
-    <h2 class="subtitle">Publisher:
-      <p class="info">{{ book.publisher }}</p>
+    <h2 class="book-subtitle">Publisher:
+      <p class="book-info">{{ book.publisher }}</p>
     </h2>
-    <h2 class="subtitle">Year of publication:
-      <p class="info">{{ book.year }}</p>
+    <h2 class="book-subtitle">Year of publication:
+      <p class="book-info">{{ book.year }}</p>
     </h2>
   </div>
 </div>
