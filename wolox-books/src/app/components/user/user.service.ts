@@ -32,7 +32,6 @@ export class UserService {
   }
 
   public loggedIn(){
-    return !!this.localStorage.getValue('accessToken');
+    return this.localStorage.getValue('accessToken');
   }
-
 }
