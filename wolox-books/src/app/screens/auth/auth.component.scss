@@ -6,6 +6,9 @@ $nav-height: 50px;
 .body-auth {
   background-color: $grey;
   padding: 100px;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .navbar {
