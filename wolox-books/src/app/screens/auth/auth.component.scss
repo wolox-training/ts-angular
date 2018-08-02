@@ -1,6 +1,39 @@
 @import '../../../scss/colors';
+@import '../../../scss/fonts';
+
+$nav-height: 50px;
 
 .body-auth {
   background-color: $grey;
   position: absolute;
+}
+
+.navbar {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  max-height: $nav-height;
+  padding: 4px;
+  box-shadow: 0 8px 5px -5px $light-grey;
+  background-color: white;
+  border-top: 5px solid $blue;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+
+  .title-main {
+    font-size: $text-very-small;
+
+    &::before {
+      margin: 0;
+      width: 150px;
+    }
+  }
+
+  .btn-logout {
+    font: $text-medium;
+    font-weight: bold;
+  }
 }
