@@ -20,4 +20,8 @@ $button-height: 40px;
     background-color: white;
     cursor: not-allowed;
   }
+
+  &:active {
+    color: $light-grey;
+  }
 }
