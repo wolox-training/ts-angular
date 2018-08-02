@@ -2,6 +2,8 @@
 @import '../../../../../scss/fonts';
 
 .books {
+  max-width: 1040px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
