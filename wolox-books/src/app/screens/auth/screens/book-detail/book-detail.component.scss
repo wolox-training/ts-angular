@@ -1,8 +1,10 @@
 @import '../../../../../scss/colors';
+@import '../../../../../scss/fonts';
 
 $book-width: 1000px;
 $book-height: 400px;
 $book-img-width: 300px;
+$book-info-width: 660px;
 
 .book {
   height: $book-height;
@@ -20,26 +22,26 @@ $book-img-width: 300px;
 .book-info {
   display: flex;
   flex-direction: column;
-  width: 660px;
+  width: $book-info-width;
 }
 
 .book-title {
-  font-size: 30px;
+  font-size: $text-very-big;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 3px solid $green;
 
   .book-genre {
-    font-size: 20px;
+    font-size: $text-big;
   }
 }
 
 .book-subtitle {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: $text-medium;
 
   .book-field {
-    font-size: 15px;
+    font-size: $text-small;
   }
 }
