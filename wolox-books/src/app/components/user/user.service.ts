@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { environment } from '../../../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,12 @@ export class UserService {
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
-  public createUser(user): Observable<Response> {
+  public createUser(user): Observable<any> {
     const CreateUserJson = this.buildCreateJson(user);
     return this.http.post(`${environment.apiUrl}/users`, CreateUserJson);
   }
 
-  public loginUser(user): Observable<Response> {
+  public loginUser(user): Observable<any> {
     return this.http.post(`${environment.apiUrl}/users/sessions`, user)
   }
 

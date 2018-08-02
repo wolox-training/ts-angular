@@ -16,10 +16,10 @@ export class LoginComponent {
     this.loginForm = fb.group({
       'email': [null, Validators.required],
       'password': [null, Validators.required]
-    }
+    })
   }
 
-  private loginUser() {
+  public loginUser() {
     this.userService.loginUser({ session: this.loginForm.value })
     .subscribe(
       resp => {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="290247ad99b9aa0dc474d2851b56a6e65f2ae77e" datatype="html">
+        <source>
+    <x id="START_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;h1&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.title }}"/>
+      <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>(<x id="INTERPOLATION_1" equiv-text="{{ book.genre }}"/>)<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+    <x id="CLOSE_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;/h1&gt;"/>
+    <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2&gt;"/>Book author:
+      <x id="START_PARAGRAPH_1" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_2" equiv-text="{{ book.author }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+    <x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2&gt;"/>
+    <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2&gt;"/>Publisher:
+      <x id="START_PARAGRAPH_1" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_3" equiv-text="{{ book.publisher }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+    <x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2&gt;"/>
+    <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2&gt;"/>Year of publication:
+      <x id="START_PARAGRAPH_1" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION_4" equiv-text="{{ book.year }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+    <x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2&gt;"/>
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
