@@ -1,39 +1,9 @@
 @import '../../../../../scss/colors';
 @import '../../../../../scss/fonts';
 
-$book-width: 220px;
-$book-height: 260px;
-
 .books {
-  margin: 100px 300px;
+  max-width: 1040px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-
-  .book {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    max-width: $book-width;
-    width: $book-width;
-    height: $book-height;
-    padding: 15px;
-    background-color: white;
-    box-shadow: 8px 8px 5px -5px $light-grey;
-
-    .book-title {
-      font-size: $text-medium;
-      font-weight: bold;
-    }
-
-    .book-author {
-      font-size: $text-very-small;
-    }
-
-    .book-img {
-      margin-bottom: 15px;
-      width: 100%;
-      height: 170px;
-    }
-  }
 }

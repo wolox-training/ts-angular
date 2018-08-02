@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LocalStorageService } from '../local-storage/local-storage.service';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  readonly ROOT_URL = 'https://wbooks-api-stage.herokuapp.com/api/v1';
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
   public createUser(user): Observable<Response> {
     const CreateUserJson = this.buildCreateJson(user);
-    return this.http.post(`${this.ROOT_URL}/users`, CreateUserJson);
+    return this.http.post(`${environment.apiUrl}/users`, CreateUserJson);
   }
 
   public loginUser(user): Observable<Response> {
-    return this.http.post(`${this.ROOT_URL}/users/sessions`, user)
+    return this.http.post(`${environment.apiUrl}/users/sessions`, user)
   }
 
   private buildCreateJson(user) {
@@ -31,11 +31,7 @@ export class UserService {
     delete json[a];
   }
 
-  public loggedIn() {
-    return !!this.localStorage.getValue('accessToken');
-  }
-
-  public getAccessToken() {
+  public loggedIn(){
     return this.localStorage.getValue('accessToken');
   }
 }

@@ -22,7 +22,6 @@ $button-height: 40px;
   }
 
   &:active {
-    box-shadow: 0 5px $green-shadow;
-    transform: translateY(5px);
+    color: $light-grey;
   }
 }
