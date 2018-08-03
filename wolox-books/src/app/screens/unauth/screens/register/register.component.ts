@@ -24,7 +24,7 @@ export class RegisterComponent {
     },
     {
        validator: ConfirmPassword.MatchPassword
-    })
+    });
   }
 
   public registerUser() {
