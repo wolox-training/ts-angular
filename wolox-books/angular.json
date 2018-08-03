@@ -15,13 +15,6 @@
       },
       "architect": {
         "build": {
-          "es": {
-             "aot": true,
-             "outputPath": "dist/wolox-books-es/",
-             "i18nFile": "src/locale/messages.es.xlf",
-             "i18nFormat": "xlf",
-             "i18nLocale": "es"
-          },
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/wolox-books",
@@ -39,6 +32,13 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+               "aot": true,
+               "outputPath": "dist/wolox-books-es/",
+               "i18nFile": "src/locale/messages.es.xlf",
+               "i18nFormat": "xlf",
+               "i18nLocale": "es"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -59,14 +59,14 @@
           }
         },
         "serve": {
-          "es": {
-            "browserTarget": "wolox-books:build:es"
-          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "wolox-books:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "wolox-books:build:es"
+            },
             "production": {
               "browserTarget": "wolox-books:build:production"
             }

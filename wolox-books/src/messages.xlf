@@ -6,7 +6,6 @@
         <source>Book author:
       <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.author }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
     </source>
-    <target>Autor del libro:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -16,7 +15,6 @@
         <source>Publisher:
       <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.publisher }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
     </source>
-    <target>Editorial:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
           <context context-type="linenumber">10</context>
@@ -26,7 +24,6 @@
         <source>Year of publication:
       <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.year }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
     </source>
-    <target>Año de publicación:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
           <context context-type="linenumber">13</context>
