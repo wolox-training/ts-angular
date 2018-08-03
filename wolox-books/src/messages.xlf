@@ -2,31 +2,25 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="31d4205c07095cc867d673cc6dd0ae2433ef65b5" datatype="html">
-        <source>Book author:
-      <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.author }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-    </source>
+      <trans-unit id="f40e1880d780ee53d708d7ae253f0cb0cf56efd8" datatype="html">
+        <source>Book author: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4819074f1b3d12ac3a065627b5da837c7ac5b3b3" datatype="html">
+        <source>Publisher: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="07881101fd2abc1dab311061f6958780f475b43d" datatype="html">
+        <source>Year of publication: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
           <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c8c31a178fd6d933cfce7f9c34ecf627253613f1" datatype="html">
-        <source>Publisher:
-      <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.publisher }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-    </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="445f66846e44740cbc3d8aa2641954e256349653" datatype="html">
-        <source>Year of publication:
-      <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="INTERPOLATION" equiv-text="{{ book.year }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-    </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/screens/auth/screens/book-detail/book-detail.component.ts</context>
-          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
     </body>

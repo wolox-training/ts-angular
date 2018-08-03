@@ -8,7 +8,7 @@ import { BooksService } from '../../components/books-service/books.service'
   styleUrls: ['./book-detail.component.scss']
 })
 export class BookDetailComponent implements OnInit {
-  book: any;
+  book: any = {};
 
   constructor(private route: ActivatedRoute, private booksService: BooksService) { }
 
