@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$lato: 'Lato', sans-serif;
+$text-big: 24px;
+$text-very-small: 10px;
+$text-small: 14px;
+$text-medium: 16px;
+
+* {
+  font-family: $lato;
+}

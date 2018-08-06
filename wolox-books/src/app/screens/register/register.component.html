@@ -1,0 +1,22 @@
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="form-container" novalidate>
+  <h1 class="title-main">BOOKS</h1>
+  <div class="form-main">
+    <label class="form-field">First name</label>
+    <input type="text" formControlName="firstName" class="form-input">
+    <p class="alert" *ngIf="!registerForm.controls['firstName'].valid && registerForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</p>
+    <label class="form-field">Last name</label>
+    <input type="text" formControlName="lastName" class="form-input">
+    <p class="alert" *ngIf="!registerForm.controls['lastName'].valid && registerForm.controls['lastName'].touched">{{ fieldRequiredAlert }}</p>
+    <label class="form-field">Email</label>
+    <input type="text" formControlName="email" class="form-input">
+    <p class="alert" *ngIf="!registerForm.controls['email'].valid && registerForm.controls['email'].touched">Please enter a valid email.</p>
+    <label class="form-field">Password</label>
+    <input type="password" formControlName="password" class="form-input">
+    <p class="alert" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">Password must contain at least 8 characters.</p>
+    <label class="form-field" *ngIf="registerForm.controls['password'].valid">Confirm Password</label>
+    <input type="password" formControlName="confirmPassword" class="form-input" *ngIf="registerForm.controls['password'].valid">
+    <p class="alert" *ngIf="registerForm.controls.confirmPassword.errors?.MatchPassword && registerForm.controls['confirmPassword'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
+    <button type="submit" class="btn-main" [disabled]="!registerForm.valid">Sign up</button>
+  </div>
+  <a class="btn-main" href='login'>Login</a>
+</form>
