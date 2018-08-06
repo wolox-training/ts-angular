@@ -11,7 +11,11 @@ export class BooksService {
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
-  public getBooks(id = ""): Observable<any> {
+  public getBooks(): Observable<any> {
+    return this.http.get(`${environment.apiUrl}/books`);
+  }
+
+  public getBook(id): Observable<any> {
     return this.http.get(`${environment.apiUrl}/books/${id}`);
   }
 }
