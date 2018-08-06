@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="form-container" novalidate>
+  <h1 class="title-main">BOOKS</h1>
+  <div class="form-main">
+    <label class="form-field">Email</label>
+    <input type="email" formControlName="email" class="form-input">
+    <label class="form-field">Password</label>
+    <input type="password" formControlName="password" class="form-input">
+    <button type="submit" class="btn-main" [disabled]="!loginForm.valid">Login</button>
+  </div>
+  <a class="btn-main" href='sign-up'>Sign Up</a>
+</form>

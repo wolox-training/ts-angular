@@ -10,5 +10,5 @@ export class ConfirmPassword {
       AC.get('confirmPassword').updateValueAndValidity({ onlySelf: true, emitEvent: false });
       return null;
     }
-    }
+  }
 }
