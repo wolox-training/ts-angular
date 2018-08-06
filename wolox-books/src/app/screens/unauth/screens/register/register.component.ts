@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../../../components/user/user';
 import { ConfirmPassword } from '../../../../components/custom-validations/confirm.password'
 import { UserService } from '../../../../components/user/user.service';
 import { Router } from '@angular/router';
@@ -12,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
   registerForm: FormGroup;
-  const fieldRequiredAlert: string = "This field is required.";
+  fieldRequiredAlert: string = "This field is required.";
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
     this.registerForm = fb.group({
@@ -28,7 +27,7 @@ export class RegisterComponent {
     });
   }
 
-  private registerUser() {
+  public registerUser() {
     this.userService.createUser({ user: this.registerForm.value })
     .subscribe(resp => { this.router.navigate(['login']) });
   }
