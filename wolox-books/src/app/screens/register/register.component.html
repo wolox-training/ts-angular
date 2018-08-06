@@ -1,9 +1,6 @@
 <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="form-container" novalidate>
-  <header class="header">
-    <img src="assets/wolox_logo.svg" class="header-logo" alt="Wolox logo">
-    <h1 class="header-title">BOOKS</h1>
-  </header>
-  <div class="form-signup">
+  <h1 class="title-main">BOOKS</h1>
+  <div class="form-main">
     <label class="form-field">First name</label>
     <input type="text" formControlName="firstName" class="form-input">
     <p class="alert" *ngIf="!registerForm.controls['firstName'].valid && registerForm.controls['firstName'].touched">{{ fieldRequiredAlert }}</p>
@@ -19,9 +16,7 @@
     <label class="form-field" *ngIf="registerForm.controls['password'].valid">Confirm Password</label>
     <input type="password" formControlName="confirmPassword" class="form-input" *ngIf="registerForm.controls['password'].valid">
     <p class="alert" *ngIf="registerForm.controls.confirmPassword.errors?.MatchPassword && registerForm.controls['confirmPassword'].touched && registerForm.controls['password'].valid">Password does not match the confirm password.</p>
-    <button type="submit" class="button-reg" [disabled]="!registerForm.valid">Sign up</button>
+    <button type="submit" class="btn-main" [disabled]="!registerForm.valid">Sign up</button>
   </div>
-  <div class="login">
-    <button type="button" class="button-reg">Login</button>
-  </div>
+  <a class="btn-main" href='login'>Login</a>
 </form>

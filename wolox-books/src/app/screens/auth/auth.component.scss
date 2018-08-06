@@ -1,0 +1,29 @@
+@import '../../../scss/colors';
+@import '../../../scss/fonts';
+
+$nav-height: 50px;
+
+.navbar {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-around;
+  max-height: $nav-height;
+  padding: 5px;
+  box-shadow: 0 8px 5px -5px $grey;
+  background-color: white;
+  border-top: 5px solid $blue;
+
+  .title-main {
+    font-size: $text-very-small;
+
+    &::before{
+      margin: 0;
+      width: 150px;
+    }
+  }
+
+  .btn-logout {
+    font: $text-medium;
+    font-weight: bold;
+  }
+}
