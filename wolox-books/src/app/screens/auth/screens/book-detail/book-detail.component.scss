@@ -1,0 +1,47 @@
+@import '../../../../../scss/colors';
+@import '../../../../../scss/fonts';
+
+$book-width: 1000px;
+$book-height: 400px;
+$book-img-width: 300px;
+$book-info-width: 660px;
+
+.book {
+  height: $book-height;
+  width: $book-width;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.book-img {
+  height: 100%;
+  width: $book-img-width;
+  margin-right: 20px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  width: $book-info-width;
+}
+
+.book-title {
+  font-size: $text-very-big;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid $green;
+
+  .book-genre {
+    font-size: $text-big;
+  }
+}
+
+.book-subtitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: $text-medium;
+}
+
+.book-field {
+  font-size: $text-small;
+}

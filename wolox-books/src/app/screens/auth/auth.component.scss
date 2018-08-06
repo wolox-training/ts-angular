@@ -3,20 +3,33 @@
 
 $nav-height: 50px;
 
+.body-auth {
+  background-color: $grey;
+  padding: 100px;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .navbar {
   display: flex;
-  align-content: flex-start;
+  align-content: center;
   justify-content: space-around;
   max-height: $nav-height;
-  padding: 5px;
-  box-shadow: 0 8px 5px -5px $grey;
+  padding: 4px;
+  box-shadow: 0 8px 5px -5px $light-grey;
   background-color: white;
   border-top: 5px solid $blue;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
 
   .title-main {
     font-size: $text-very-small;
 
-    &::before{
+    &::before {
       margin: 0;
       width: 150px;
     }
