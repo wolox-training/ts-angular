@@ -1,5 +1,5 @@
 <div class="book" *ngIf="book">
-  <img [src]="book.image_url" class="book-img" [alt]="book.title">
+  <img [src]="book.image_url" class="book-img" alt="book.title">
   <div class="book-info">
     <p class="book-title">{{ book.title }} <span class="book-genre">({{ book.genre }})</span></p>
     <p class="book-subtitle">Book author: <span class="book-field">{{ book.author }}</span></p>
