@@ -1,23 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import {  HttpClientModule } from '@angular/common/http'
 
+import { UserService } from './components/user/user.service'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './screens/register/register.component';
+import { LoginComponent } from './screens/login/login.component';
+import { AuthComponent } from './screens/auth/auth.component';
+import { LocalStorageService } from './components/local-storage/local-storage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
