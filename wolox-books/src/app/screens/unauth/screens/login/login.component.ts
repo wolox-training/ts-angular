@@ -16,11 +16,7 @@ export class LoginComponent {
     this.loginForm = fb.group({
       'email': [null, Validators.required],
       'password': [null, Validators.required]
-<<<<<<< HEAD
     });
-=======
-    })
->>>>>>> Auth-Unauth
   }
 
   private loginUser() {
