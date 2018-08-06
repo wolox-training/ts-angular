@@ -19,7 +19,7 @@ export class LoginComponent {
     });
   }
 
-  private loginUser() {
+  public loginUser() {
     this.userService.loginUser({ session: this.loginForm.value })
     .subscribe(
       resp => {

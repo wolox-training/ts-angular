@@ -2,8 +2,8 @@
   <img [src]="book.image_url" class="book-img" [alt]="book.title">
   <div class="book-info">
     <p class="book-title">{{ book.title }} <span class="book-genre">({{ book.genre }})</span></p>
-    <p class="book-subtitle">Book author: <span class="book-field">{{ book.author }}</span></p>
-    <p class="book-subtitle">Publisher: <span class="book-field">{{ book.publisher }}</span></p>
-    <p class="book-subtitle">Year of publication: <span class="book-field">{{ book.year }}</span><p>
+    <p class="book-subtitle"><ng-container i18n>Book author: </ng-container><span class="book-field">{{ book.author }}</span></p>
+    <p class="book-subtitle"><ng-container i18n>Publisher: </ng-container><span class="book-field">{{ book.publisher }}</span></p>
+    <p class="book-subtitle"><ng-container i18n>Year of publication: </ng-container><span class="book-field">{{ book.year }}</span><p>
   </div>
 </div>

@@ -27,7 +27,7 @@ export class RegisterComponent {
     });
   }
 
-  private registerUser() {
+  public registerUser() {
     this.userService.createUser({ user: this.registerForm.value })
     .subscribe(resp => { this.router.navigate(['login']) });
   }
