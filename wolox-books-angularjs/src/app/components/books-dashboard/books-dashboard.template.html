@@ -20,7 +20,7 @@
     <div class="book"  ng-repeat="book in $ctrl.books | filter : {[critFilter.code]: $ctrl.query}">
       <img ng-if="book.image_url" class="book-img" src={{book.image_url}}>
       <div class="no-book-img" ng-if="!book.image_url">
-        <img class="book-img" src=../../assets/default_book.svg>
+        <img class="book-img" src="../../assets/default_book.svg" alt="no-book">
       </div>
       <span class="book-title">{{book.title}}</span>
       <span class="book-author">{{book.author}}</span>

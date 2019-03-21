@@ -87,10 +87,9 @@ angular.
         }
      ];
 
-    //  https://stackoverflow.com/questions/30922148/filter-results-in-angularjs-based-on-select-value
-    this.criterias = [
-      { name: 'Nombre', code: 'title'},
-      { name: 'Autor', code: 'author' }
-    ]
+      this.criterias = [
+        { name: 'Nombre', code: 'title'},
+        { name: 'Autor', code: 'author' }
+      ];
     }
   });
