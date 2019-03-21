@@ -1,4 +1,5 @@
 angular.module('booksApp', [
-  'booksDashboard'
+  'booksDashboard',
+  'navbar'
 ]);
 
