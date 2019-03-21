@@ -1,3 +1,15 @@
-<div class="dashboard-container" ng-repeat="book in $ctrl.books">
-  <span class="book">{{book.name}}</span>
+<div class="dashboard-container">
+  <select class="filter-select">
+    <option>Opcion 1</option>
+    <option>Opcion 2</option>
+    <option>Opcion 3</option>
+  </select>
+  <input class="search-input" placeholder="Buscar...">
+  <div class="books">
+    <div class="book"  ng-repeat="book in $ctrl.books">
+      <img class="book-img" src={{book.image_url}}>
+      <span class="book-title">{{book.title}}</span>
+      <span>{{book.author}}</span>
+    </div>
+  </div>
 </div>

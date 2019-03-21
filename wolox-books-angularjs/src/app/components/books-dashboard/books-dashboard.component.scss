@@ -1,5 +1,61 @@
-.dashboard-container {
-  .book {
+@import 'app/scss/variables/_colors.scss';
+
+.dashboard-container{
+  max-width: 840px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.book {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  width: 150px;
+
+  .book-img {
+    width: 130px;
+    height: 180px;
+  }
+
+  .book-title {
     font-weight: bold;
   }
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.base-input {
+  background-color: $lighter-grey;
+  padding: 10px;
+  font-style: italic;
+  font-size: 14px;
+  color: $light-grey;
+  line-height: 19px;
+  max-width: 240px;
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  @extend .base-input;
+  &::after {
+   background: url('../../assets/wbooks_logo.svg') no-repeat;
+   display: inline-block;
+   height: 100px;
+   width: 100px;
+   background-size:contain;
+   content: '';
+   position: absolute;
+   top: 17px;
+   left: 210px;
+   z-index: 1000;
+  }
+}
+
+.filter-select {
+  @extend .base-input;
 }
