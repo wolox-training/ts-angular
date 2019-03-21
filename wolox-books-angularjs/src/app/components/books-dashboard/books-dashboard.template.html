@@ -1,15 +1,29 @@
 <div class="dashboard-container">
-  <select class="filter-select">
-    <option>Opcion 1</option>
-    <option>Opcion 2</option>
-    <option>Opcion 3</option>
-  </select>
-  <input class="search-input" placeholder="Buscar...">
+  <div class="filter-criteria">
+    <div class="filter-select-img">
+      <select
+        ng-init="critFilter = $ctrl.criterias[0]" 
+        class="filter-select"
+        ng-model="critFilter"
+        ng-options="criteria as criteria.name for criteria in $ctrl.criterias"
+      >
+      </select>
+    </div>
+    <div class="search-input-container">
+      <input class="base-input" ng-model="$ctrl.query" placeholder="Buscar...">
+      <div class="search-icon-container">
+        <img class="search-icon" src="../../assets/search.svg" alt="search">
+      </div>
+    </div>
+  </div>
   <div class="books">
-    <div class="book"  ng-repeat="book in $ctrl.books">
-      <img class="book-img" src={{book.image_url}}>
+    <div class="book"  ng-repeat="book in $ctrl.books | filter : {[critFilter.code]: $ctrl.query}">
+      <img ng-if="book.image_url" class="book-img" src={{book.image_url}}>
+      <div class="no-book-img" ng-if="!book.image_url">
+        <img class="book-img" src=../../assets/default_book.svg>
+      </div>
       <span class="book-title">{{book.title}}</span>
-      <span>{{book.author}}</span>
+      <span class="book-author">{{book.author}}</span>
     </div>
   </div>
 </div>

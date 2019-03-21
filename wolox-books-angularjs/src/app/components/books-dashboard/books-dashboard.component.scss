@@ -1,15 +1,22 @@
 @import 'app/scss/variables/_colors.scss';
 
+$no-book-img-size: 70px; 
+$search-icon-size: 25px;
+$search-icon-container-size: 40px;
+
 .dashboard-container{
   max-width: 840px;
   width: 100%;
   margin: auto;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
+
 .book {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 40px 40px 40px 0;
   width: 150px;
 
   .book-img {
@@ -19,6 +26,12 @@
 
   .book-title {
     font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .book-author {
+    margin-top: 10px;
+    font-size: 12px;
   }
 }
 
@@ -35,27 +48,60 @@
   font-size: 14px;
   color: $light-grey;
   line-height: 19px;
-  max-width: 240px;
-  width: 100%;
-  position: relative;
+  width: 240px;
+  height: 40px;
 }
 
-.search-input {
-  @extend .base-input;
-  &::after {
-   background: url('../../assets/wbooks_logo.svg') no-repeat;
-   display: inline-block;
-   height: 100px;
-   width: 100px;
-   background-size:contain;
-   content: '';
-   position: absolute;
-   top: 17px;
-   left: 210px;
-   z-index: 1000;
-  }
+.search-icon {
+  height: $search-icon-size;;
+  width: $search-icon-size;;
+}
+
+.search-icon-container {
+  background-color: $green;
+  height: $search-icon-container-size;
+  width: $search-icon-container-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input-container {
+  display: flex;
+}
+
+.filter-criteria {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .filter-select {
   @extend .base-input;
+  margin-right: 20px;
+}
+
+.filter-select-img {
+  position: relative;
+
+  &::after {
+    content: '\25bc';
+    position: absolute;
+    top: 15px;
+    left: 214px;
+    color: $light-grey;
+  }
+}
+
+.no-book-img {
+  width: 130px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $grey;
+
+  .book-img {
+    width: $no-book-img-size;
+    height: $no-book-img-size;
+  }
 }

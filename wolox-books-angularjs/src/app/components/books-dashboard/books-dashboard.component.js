@@ -86,5 +86,11 @@ angular.
           "image_url": "http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg"
         }
      ];
+
+    //  https://stackoverflow.com/questions/30922148/filter-results-in-angularjs-based-on-select-value
+    this.criterias = [
+      { name: 'Nombre', code: 'title'},
+      { name: 'Autor', code: 'author' }
+    ]
     }
   });
