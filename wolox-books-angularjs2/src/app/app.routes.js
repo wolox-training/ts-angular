@@ -28,7 +28,7 @@ angular.module('app-bootstrap').config([
         }
       })
       .state('centered.book-detail', {
-        url: '/book-detail',
+        url: '/book-detail/{bookId}',
         views: {
           content: {
             templateUrl: '../app/components/centered/book-detail/book-detail.component.html',

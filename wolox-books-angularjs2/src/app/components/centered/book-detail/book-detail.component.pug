@@ -1,4 +1,5 @@
-h1.frontend-bootstrap-component-2
-  | BOOK DETAIL
 a(ui-sref='centered.dashboard')
-  | Go to dashboard
+  | Volver
+img.book-img(ng-if='bookDetailCtrl.book.image_url', src='{{bookDetailCtrl.book.image_url}}')
+.no-book-img(ng-if='!bookDetailCtrl.book.image_url')
+  img.book-img(src='../../assets/default_book.svg', alt='no-book')
