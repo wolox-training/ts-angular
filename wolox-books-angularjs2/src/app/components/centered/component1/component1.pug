@@ -1,0 +1,22 @@
+//- h1.frontend-bootstrap-component-1
+//-   | {{comp1Ctrl.component1Phrase}}
+//- h1.frontend-bootstrap-component-1
+//-   | {{ 'COMPO1.TITLE' | translate }}
+//- a(ui-sref='centered.state2')
+//-   | Go to state2
+
+.dashboard-container
+  .filter-criteria
+    .filter-select-img
+      select.filter-select(ng-init='critFilter = $ctrl.criterias[0]', ng-model='critFilter', ng-options='criteria as criteria.name for criteria in $ctrl.criterias')
+    .search-input-container
+      input.base-input(ng-model='$ctrl.query', placeholder='Buscar...')
+      .search-icon-container
+        img.search-icon(src='../../assets/search.svg', alt='search')
+  .books
+    .book(ng-repeat='book in $ctrl.books | filter : {[critFilter.code]: $ctrl.query}')
+      img.book-img(ng-if='book.image_url', src='{{book.image_url}}')
+      .no-book-img(ng-if='!book.image_url')
+        img.book-img(src='../../assets/default_book.svg', alt='no-book')
+      span.book-title {{book.title}}
+      span.book-author {{book.author}}

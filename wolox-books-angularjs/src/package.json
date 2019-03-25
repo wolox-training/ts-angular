@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "wolox-books-angularjs",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.22",
     "angular": "1.7.x",
     "angular-animate": "1.7.x",
     "angular-resource": "1.7.x",
