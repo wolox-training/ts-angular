@@ -1,4 +1,4 @@
-angular.module('app-bootstrap').controller('Component2Controller', [
+angular.module('app-bootstrap').controller('BookDetailController', [
   function () {
 
     this.component2Phrase = 'This is component 2';

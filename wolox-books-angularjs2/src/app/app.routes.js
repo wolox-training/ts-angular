@@ -4,7 +4,7 @@ angular.module('app-bootstrap').config([
 
     // For any unmatched urls
     $urlRouterProvider.otherwise(($injector) => {
-      $injector.get('$state').go('centered.state1');
+      $injector.get('$state').go('centered.dashboard');
     });
 
     // Now set up the states
@@ -17,22 +17,22 @@ angular.module('app-bootstrap').config([
           }
         }
       })
-      .state('centered.state1', {
-        url: '/state1',
+      .state('centered.dashboard', {
+        url: '/dashboard',
         views: {
           content: {
-            templateUrl: '../app/components/centered/component1/component1.html',
-            controller: 'Component1Controller',
-            controllerAs: 'comp1Ctrl'
+            templateUrl: '../app/components/centered/dashboard/dashboard.component.html',
+            controller: 'DashboardController',
+            controllerAs: 'dashboardCtrl'
           }
         }
       })
-      .state('centered.state2', {
-        url: '/state2',
+      .state('centered.book-detail', {
+        url: '/book-detail',
         views: {
           content: {
-            templateUrl: '../app/components/centered/component2/component2.html',
-            controller: 'Component2Controller',
+            templateUrl: '../app/components/centered/book-detail/book-detail.component.html',
+            controller: 'BookDetailController',
             controllerAs: 'comp2Ctrl'
           }
         }

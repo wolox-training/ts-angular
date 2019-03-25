@@ -1,4 +1,4 @@
-angular.module('app-bootstrap').controller('Component1Controller', [
+angular.module('app-bootstrap').controller('DashboardController', [
   function () {
     this.books = [
       {

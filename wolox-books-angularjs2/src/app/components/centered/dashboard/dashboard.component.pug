@@ -1,15 +1,18 @@
 .dashboard-container
   .filter-criteria
     .filter-select-img
-      select.filter-select(ng-init='critFilter = comp1Ctrl.criterias[0]', ng-model='critFilter', ng-options='criteria as criteria.name for criteria in comp1Ctrl.criterias')
+      select.filter-select(ng-init='critFilter = dashboardCtrl.criterias[0]', ng-model='critFilter', ng-options='criteria as criteria.name for criteria in dashboardCtrl.criterias')
     .search-input-container
-      input.base-input(ng-model='comp1Ctrl.query', placeholder='Buscar...')
+      input.base-input(ng-model='dashboardCtrl.query', placeholder='Buscar...')
       .search-icon-container
         img.search-icon(src='../../assets/search.svg', alt='search')
   .books
-    .book(ng-repeat='book in comp1Ctrl.books | filter : {[critFilter.code]: comp1Ctrl.query}')
+    .book(ng-repeat='book in dashboardCtrl.books | filter : {[critFilter.code]: dashboardCtrl.query}')
       img.book-img(ng-if='book.image_url', src='{{book.image_url}}')
       .no-book-img(ng-if='!book.image_url')
         img.book-img(src='../../assets/default_book.svg', alt='no-book')
       span.book-title {{book.title}}
       span.book-author {{book.author}}
+
+a(ui-sref='centered.book-detail')
+  | Go to book-detail
