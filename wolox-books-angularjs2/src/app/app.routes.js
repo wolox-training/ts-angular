@@ -1,4 +1,4 @@
-angular.module('app-bootstrap').config([
+angular.module('app').config([
   '$stateProvider', '$urlRouterProvider', '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $locationProvider) {
 

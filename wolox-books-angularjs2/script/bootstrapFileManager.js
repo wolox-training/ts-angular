@@ -61,7 +61,7 @@ module.exports.initPackage = function (responsibleFullName, projectName, project
 
 module.exports.initAngularModule = function (projectName) {
 
-	var toReplace = "'app-bootstrap'";
+	var toReplace = "'app'";
 	var replacement ="'" + projectName + "'";
 	var indexPug = './src/index.pug';
 

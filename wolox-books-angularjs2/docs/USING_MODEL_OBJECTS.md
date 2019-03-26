@@ -73,7 +73,7 @@ angular.module('app-bootstrap').factory('AbstractModel', [
 ```
 
 ```js
-angular.module('app-bootstrap').factory('Bill', [
+angular.module('app').factory('Bill', [
   'AbstractModel', 'User',
   function (AbstractModel, User) {
 

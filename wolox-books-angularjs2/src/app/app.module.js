@@ -1,5 +1,5 @@
 angular.module(
-  'app-bootstrap', [
+  'app', [
     'ui.router',
     'LocalStorageModule',
     'pascalprecht.translate'

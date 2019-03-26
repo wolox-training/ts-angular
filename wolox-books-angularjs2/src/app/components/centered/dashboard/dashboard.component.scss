@@ -1,6 +1,8 @@
 $no-book-img-size: 70px;
 $search-icon-size: 25px;
 $search-icon-container-size: 40px;
+$book-height: 180px;
+$book-width: 130px;
 
 .dashboard-container {
   display: flex;
@@ -22,8 +24,8 @@ $search-icon-container-size: 40px;
       width: 150px;
 
       .book-img {
-        height: 180px;
-        width: 130px;
+        height: $book-height;
+        width: $book-width;
       }
 
       .book-title {
@@ -40,9 +42,9 @@ $search-icon-container-size: 40px;
         align-items: center;
         background-color: $grey;
         display: flex;
-        height: 180px;
+        height: $book-height;
         justify-content: center;
-        width: 130px;
+        width: $book-width;
 
         .book-img {
           height: $no-book-img-size;
