@@ -4,9 +4,10 @@ angular.module('app-bootstrap').config([
 
     $translateProvider.translations('es', {
       BookDetail: {
-        return: 'Volver',
+        return: '< Volver',
         rent: 'Alquilar',
-        suggestions: 'Sugerencias'
+        suggestions: 'Sugerencias',
+        comments: 'Comentarios'
       }
     });
   }

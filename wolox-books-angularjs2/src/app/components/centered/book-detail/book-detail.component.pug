@@ -3,9 +3,9 @@ a(ui-sref='centered.dashboard')
 .details-container
   .book-details-container
     .book
-      img.book-img(ng-if='bookDetailCtrl.book.image_url', src='{{bookDetailCtrl.book.image_url}}')
+      img.book-img(ng-if='bookDetailCtrl.book.image_url' src='{{bookDetailCtrl.book.image_url}}' alt='book-img')
       .no-book-img(ng-if='!bookDetailCtrl.book.image_url')
-        img.book-img(src='../../assets/default_book.svg', alt='no-book')
+        img.book-img(src='../../assets/default_book.svg' alt='no-book')
     .book-info
       span.book-title {{bookDetailCtrl.book.title}}
       span.book-item.book-author {{bookDetailCtrl.book.author}}
@@ -14,9 +14,23 @@ a(ui-sref='centered.dashboard')
       span.book-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       button.rent-btn {{'BookDetail.rent' | translate}}
   .book-suggestions
-    span.title {{'BookDetail.suggestions' | translate}}
+    span.details-title {{'BookDetail.suggestions' | translate}}
     .books-list
       .book(ng-repeat='book in bookDetailCtrl.books')
-        img.book-img(ng-if='book.image_url', src='{{book.image_url}}')
+        img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img')
         .no-book-img(ng-if='!book.image_url')
-          img.book-img(src='../../assets/default_book.svg', alt='no-book')
+          img.book-img(src='../../assets/default_book.svg' alt='no-book')
+  .book-comments
+    span.details-title {{'BookDetail.comments' | translate}}
+    .comment-container
+      img.user-img(src='../../assets/default_book.svg' alt='no-book')
+      .comment-input-container
+        span.add-comment Agregar un comentario
+        textarea.comment-input
+        button.send-btn Enviar
+    .saved-comment-container(ng-repeat='comment in bookDetailCtrl.comments')
+      img.user-img(src='{{comment.userImage}}' alt='user-image')
+      .comment-info
+        span.name {{comment.name}}
+        span.date {{comment.date}}
+        span.description {{comment.description}}
