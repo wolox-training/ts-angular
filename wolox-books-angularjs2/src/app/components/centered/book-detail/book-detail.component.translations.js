@@ -3,8 +3,10 @@ angular.module('app-bootstrap').config([
   function ($translateProvider) {
 
     $translateProvider.translations('es', {
-      Detail: {
-        return: 'Volver'
+      BookDetail: {
+        return: 'Volver',
+        rent: 'Alquilar',
+        suggestions: 'Sugerencias'
       }
     });
   }

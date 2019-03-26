@@ -1,14 +1,22 @@
 a(ui-sref='centered.dashboard')
-  | {{'Detail.return' | translate}}
-.detail-container
-  .book
-    img.book-img(ng-if='bookDetailCtrl.book.image_url', src='{{bookDetailCtrl.book.image_url}}')
-    .no-book-img(ng-if='!bookDetailCtrl.book.image_url')
-      img.book-img(src='../../assets/default_book.svg', alt='no-book')
-  .book-info
-    span.book-title {{bookDetailCtrl.book.title}}
-    span.book-item.book-author {{bookDetailCtrl.book.author}}
-    span.book-item {{bookDetailCtrl.book.year}}
-    span.book-item {{bookDetailCtrl.book.genre}}
-    span.book-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    button.rent-btn Alquilar
+  | {{'BookDetail.return' | translate}}
+.details-container
+  .book-details-container
+    .book
+      img.book-img(ng-if='bookDetailCtrl.book.image_url', src='{{bookDetailCtrl.book.image_url}}')
+      .no-book-img(ng-if='!bookDetailCtrl.book.image_url')
+        img.book-img(src='../../assets/default_book.svg', alt='no-book')
+    .book-info
+      span.book-title {{bookDetailCtrl.book.title}}
+      span.book-item.book-author {{bookDetailCtrl.book.author}}
+      span.book-item {{bookDetailCtrl.book.year}}
+      span.book-item {{bookDetailCtrl.book.genre}}
+      span.book-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      button.rent-btn {{'BookDetail.rent' | translate}}
+  .book-suggestions
+    span.title {{'BookDetail.suggestions' | translate}}
+    .books-list
+      .book(ng-repeat='book in bookDetailCtrl.books')
+        img.book-img(ng-if='book.image_url', src='{{book.image_url}}')
+        .no-book-img(ng-if='!book.image_url')
+          img.book-img(src='../../assets/default_book.svg', alt='no-book')
