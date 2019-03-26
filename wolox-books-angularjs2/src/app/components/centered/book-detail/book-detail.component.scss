@@ -1,0 +1,79 @@
+.detail-container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 840px;
+  width: 100%;
+  height: 310px;
+  border-bottom:2px solid #00adee;
+
+  .book-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    height: 275px;
+
+    .book-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .book-item {
+      font-size: 16px;
+      margin: 5px 0;
+      color:#4a4a4a;
+    }
+    
+    .book-author {
+      margin-bottom: 15px;
+    }
+
+    .book-desc {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #999999;
+    }
+
+    .rent-btn {
+      margin-top: auto;
+      background:#00adee;
+      width:192px;
+      height:38px;
+      font-size:20px;
+      color:#ffffff;
+      font-weight: bold;
+    }
+  }
+
+  .book {
+    display: flex;
+    flex-direction: column;
+    width: 291px;
+    height: 372px;
+
+    .no-book  {
+      width: 291px;
+      height: 372px;
+    }
+
+    .book-img {
+      width: 195px;
+      height: 275px;
+    }
+
+    .no-book-img {
+      width: 195px;
+      height: 275px;
+      align-items: center;
+      background-color: $grey;
+      display: flex;
+      justify-content: center;
+
+      .book-img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}

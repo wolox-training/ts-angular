@@ -3,8 +3,8 @@ angular.module('app-bootstrap').config([
   function ($translateProvider) {
 
     $translateProvider.translations('es', {
-      COMPO2: {
-        TITLE: 'Title 2'
+      Detail: {
+        return: 'Volver'
       }
     });
   }

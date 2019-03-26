@@ -33,7 +33,7 @@ angular.module('app-bootstrap').config([
           content: {
             templateUrl: '../app/components/centered/book-detail/book-detail.component.html',
             controller: 'BookDetailController',
-            controllerAs: 'comp2Ctrl'
+            controllerAs: 'bookDetailCtrl'
           }
         }
       });
