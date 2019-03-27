@@ -46,6 +46,16 @@ angular.module('app').config([
             controllerAs: 'signUpCtrl'
           }
         }
+      })
+      .state('centered.login', {
+        url: '/login',
+        views: {
+          content: {
+            templateUrl: '../app/components/centered/login/login.html',
+            controller: 'LoginController',
+            controllerAs: 'loginCtrl'
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);

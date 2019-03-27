@@ -1,24 +1,24 @@
 .sign-up-container
-  span {{'signUp.signUp' | translate}}
+  img.title-img(src='../../assets/wbooks_logo.svg' alt='no-book')
   form.sign-up-form(novalidate name='userForm')
     .form-group
       label.form-label {{'signUp.name' | translate}}
       input.form-input(type='text' name='name' ng-model='user.name' required)
-      span(ng-show='userForm.name.$invalid && userForm.name.$touched') {{'signUp.requiredField' | translate}}
+      span.error(ng-show='userForm.name.$invalid && userForm.name.$touched') {{'signUp.requiredField' | translate}}
     .form-group
       label.form-label Usuario
       input.form-input(type='text' name='username' ng-model='user.username' required)
-      span(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'signUp.requiredField' | translate}}
+      span.error(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'signUp.requiredField' | translate}}
     .form-group
       label.form-label {{'signUp.email' | translate}}
       input.form-input(type='email' name='email' ng-model='user.email' required)
-      span(ng-show='userForm.email.$invalid && userForm.email.$touched') {{'signUp.invalidEmail' | translate}}
+      span.error(ng-show='userForm.email.$invalid && userForm.email.$touched') {{'signUp.invalidEmail' | translate}}
     .form-group
       label.form-label {{'signUp.password' | translate}}
-      input.form-input(ng-minlength='8' ng-maxlength='52' type='password' name='password' ng-model='user.password' ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/" required)
-      span(ng-show='userForm.password.$invalid && userForm.password.$touched') {{'signUp.invalidPassword' | translate}}
-    .form-group(ng-show="userForm.password.$valid")
+      input.form-input(ng-minlength='8' ng-maxlength='52' type='password' name='password' ng-model='user.password' ng-pattern='/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/' required)
+      span.error(ng-show='userForm.password.$invalid && userForm.password.$touched') {{'signUp.invalidPassword' | translate}}
+    .form-group(ng-show='userForm.password.$valid')
       label.form-label {{'signUp.confirmPassword' | translate}}
-      input.form-input(ng-model="user.confirmPassword" name="confirmPassword" type="password")
-      span(ng-show="user.password != user.confirmPassword && userForm.confirmPassword.$touched") {{'signUp.invalidConfirm' | translate}}
-    button.blue-btn(ng-click='signUpCtrl.submit()') {{'signUp.submit' | translate}}
+      input.form-input(ng-model='user.confirmPassword' name='confirmPassword' type='password')
+      span.error(ng-show='user.password != user.confirmPassword && userForm.confirmPassword.$touched') {{'signUp.invalidConfirm' | translate}}
+    button.blue-btn(type='submit' ng-click='signUpCtrl.submit()') {{'signUp.submit' | translate}}

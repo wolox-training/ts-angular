@@ -6,6 +6,9 @@
   justify-content: center;
 }
 
+.title-img {
+  margin-bottom: 20px;
+}
 .sign-up-form {
   align-items: center;
   display: flex;
@@ -14,7 +17,6 @@
   width: 100%;
 
   .form-group {
-    align-items: center;
     display: flex;
     flex-direction: column;
     max-width: 541px;
@@ -28,12 +30,16 @@
     }
 
     .form-label {
-      align-self: flex-start;
+      
       margin-bottom: 5px;
+    }
+
+    .error {
+      color: red;
     }
   }
 
   .blue-btn {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
