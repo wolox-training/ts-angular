@@ -21,7 +21,7 @@ angular.module('app').config([
         url: '/dashboard',
         views: {
           content: {
-            templateUrl: '../app/components/centered/dashboard/dashboard.component.html',
+            templateUrl: '../app/components/centered/dashboard/dashboard.html',
             controller: 'DashboardController',
             controllerAs: 'dashboardCtrl'
           }
@@ -31,7 +31,7 @@ angular.module('app').config([
         url: '/book-detail/{bookId}',
         views: {
           content: {
-            templateUrl: '../app/components/centered/book-detail/book-detail.component.html',
+            templateUrl: '../app/components/centered/book-detail/book-detail.html',
             controller: 'BookDetailController',
             controllerAs: 'bookDetailCtrl'
           }

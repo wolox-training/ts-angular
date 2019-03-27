@@ -1,6 +1,7 @@
 @import 'equalizer.scss';
 @import 'variables/colors';
 @import 'base';
-@import '../app/components/centered/dashboard/dashboard.component';
-@import '../app/components/centered/book-detail/book-detail.component';
+@import 'buttons';
+@import '../app/components/centered/dashboard/dashboard';
+@import '../app/components/centered/book-detail/book-detail';
 @import '../app/components/centered/book-detail/components/comment/comment';

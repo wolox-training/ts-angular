@@ -28,5 +28,5 @@ a.return(ui-sref='centered.dashboard')
         span.add-comment {{'BookDetail.addComment' | translate}}
         textarea.comment-input
         button.send-btn {{'BookDetail.send' | translate}}
-    .saved-comment-container(ng-repeat='comment in bookDetailCtrl.comments')
+    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments')
       comment(comment='comment')

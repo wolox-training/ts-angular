@@ -1,17 +1,15 @@
+$book-height: 370px;
+$book-width: 290px;
+$book-img-height: 275px;
+$book-img-width: 195px;
+
+
 .details-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 840px;
   width: 100%;
-}
-
-%base-btn {
-  color: $white;
-  font-size: 20px;
-  font-weight: bold;
-  height: 40px;
-  width: 195px;
 }
 
 .return {
@@ -65,26 +63,26 @@
   .book {
     display: flex;
     flex-direction: column;
-    height: 372px;
-    width: 291px;
+    height: $book-height;
+    width: $book-width;
 
     .no-book  {
-      height: 372px;
-      width: 291px;
+      height: $book-height;
+      width: $book-width;
     }
 
     .book-img {
-      height: 275px;
-      width: 195px;
+      height: $book-img-height;
+      width: $book-img-width;
     }
 
     .no-book-img {
       align-items: center;
       background-color: $grey;
       display: flex;
-      height: 275px;
+      height: $book-img-height;
       justify-content: center;
-      width: 195px;
+      width: $book-img-width;
 
       .book-img {
         height: 120px;
@@ -112,8 +110,8 @@
       margin: 5px 30px 10px 20px;
 
       .book-img {
-        height: 124px;
-        width: 87px;
+        height: 125px;
+        width: 90px;
       }
 
       .book-title {
