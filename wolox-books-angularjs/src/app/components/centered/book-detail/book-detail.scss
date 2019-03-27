@@ -54,12 +54,6 @@ $sugg-book-width: 90px;
       font-size: 14px;
       margin-top: 15px;
     }
-
-    .rent-btn {
-      @extend %base-btn;
-      background: $ribbon-blue;
-      margin-top: auto;
-    }
   }
 
   .book {

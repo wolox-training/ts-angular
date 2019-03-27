@@ -1,0 +1,39 @@
+.sign-up-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.sign-up-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+
+  .form-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 541px;
+    width: 100%;
+    margin-top: 20px;
+
+    .form-input {
+      background-color: $lighter-grey;
+      height: 38px;
+      width: 100%;
+    }
+
+    .form-label {
+      align-self: flex-start;
+      margin-bottom: 5px;
+    }
+  }
+
+  .blue-btn {
+    margin-top: 20px;
+  }
+}
