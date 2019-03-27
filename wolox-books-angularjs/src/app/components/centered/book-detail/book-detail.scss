@@ -3,6 +3,8 @@ $book-width: 290px;
 $book-img-height: 275px;
 $book-img-width: 195px;
 
+$sugg-book-height: 125px;
+$sugg-book-width: 90px;
 
 .details-container {
   display: flex;
@@ -110,8 +112,8 @@ $book-img-width: 195px;
       margin: 5px 30px 10px 20px;
 
       .book-img {
-        height: 125px;
-        width: 90px;
+        height: $sugg-book-height;
+        width: $sugg-book-width;
       }
 
       .book-title {
@@ -128,9 +130,9 @@ $book-img-width: 195px;
         align-items: center;
         background-color: $grey;
         display: flex;
-        height: 124px;
+        height: $sugg-book-height;
         justify-content: center;
-        width: 87px;
+        width: $sugg-book-width;
 
         .book-img {
           height: $no-book-img-size;

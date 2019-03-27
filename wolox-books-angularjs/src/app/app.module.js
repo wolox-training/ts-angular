@@ -1,5 +1,7 @@
-angular.module('booksApp', [
-  'booksDashboard',
-  'navbar'
-]);
-
+angular.module(
+  'app', [
+    'ui.router',
+    'LocalStorageModule',
+    'pascalprecht.translate'
+  ]
+);
