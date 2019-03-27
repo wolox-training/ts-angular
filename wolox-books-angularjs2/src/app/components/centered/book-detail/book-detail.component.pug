@@ -25,12 +25,8 @@ a.return(ui-sref='centered.dashboard')
     .comment-container
       img.user-img(src='../../assets/default_book.svg' alt='no-book')
       .comment-input-container
-        span.add-comment Agregar un comentario
+        span.add-comment {{'BookDetail.addComment' | translate}}
         textarea.comment-input
-        button.send-btn Enviar
+        button.send-btn {{'BookDetail.send' | translate}}
     .saved-comment-container(ng-repeat='comment in bookDetailCtrl.comments')
-      img.user-img(src='{{comment.userImage}}' alt='user-image')
-      .comment-info
-        span.name {{comment.name}}
-        span.date {{comment.date}}
-        span.description {{comment.description}}
+      comment(comment='comment')

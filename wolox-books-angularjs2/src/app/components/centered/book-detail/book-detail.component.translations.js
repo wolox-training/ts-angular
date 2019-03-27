@@ -7,7 +7,9 @@ angular.module('app').config([
         return: '< Volver',
         rent: 'Alquilar',
         suggestions: 'Sugerencias',
-        comments: 'Comentarios'
+        comments: 'Comentarios',
+        addComment: 'Agregar un comentario',
+        send: 'Enviar'
       }
     });
   }

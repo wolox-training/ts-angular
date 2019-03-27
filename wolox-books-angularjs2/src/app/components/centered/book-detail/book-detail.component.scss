@@ -192,31 +192,3 @@
     }
   }
 }
-
-.saved-comment-container {
-  display: flex;
-  flex-direction: row;
-
-  .comment-info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    width: 100%;
-
-    .name {
-      font-size: 14px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-
-    .date {
-      color: $dark-grey;
-      font-size: 12px;
-    }
-
-    .description {
-      color: $light-grey;
-      margin: 15px 0;
-    }
-  }
-}
