@@ -1,10 +1,10 @@
-.sign-up-container
+.auth-container
   img.title-img(src='../../assets/wbooks_logo.svg' alt='wolox-logo')
   form.main-form(novalidate name='userForm')
     .form-group
-      label.form-label Usuario
-      input.form-input(type='text' name='username' ng-model='user.username' required)
-      span.error(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'requiredField' | translate}}
+      label.form-label Email
+      input.form-input(type='text' name='email' ng-model='user.email' required)
+      span.error(ng-show='userForm.email.$invalid && userForm.email.$touched') {{'requiredField' | translate}}
     .form-group
       label.form-label {{'signUp.password' | translate}}
       input.form-input(type='password' ng-model='user.password' name='password' required)

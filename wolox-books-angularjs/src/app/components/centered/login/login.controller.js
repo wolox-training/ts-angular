@@ -1,7 +1,11 @@
-angular.module('app').controller('LoginController', [ 'userService',
-  function (userService) {
+angular.module('app').controller('LoginController', [ 'userService', '$scope',
+  function (userService, $scope) {
     this.submit = () => {
-      userService.login();
+      if ($scope.userForm.$valid) {
+        userService.login({ session: $scope.user }).then(res => {
+          
+        });
+      }
     }
   }
 ]);
