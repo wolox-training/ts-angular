@@ -2,7 +2,6 @@
 
 $no-book-img-size: 70px; 
 $search-icon-size: 25px;
-$search-icon-container-size: 40px;
 
 .dashboard-container{
   max-width: 840px;
@@ -53,14 +52,13 @@ $search-icon-container-size: 40px;
 }
 
 .search-icon {
-  height: $search-icon-size;;
-  width: $search-icon-size;;
+  height: $search-icon-size;
+  width: $search-icon-size;
+  margin: 0 10px;
 }
 
 .search-icon-container {
   background-color: $green;
-  height: $search-icon-container-size;
-  width: $search-icon-container-size;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-@import 'equalizer.scss';
-@import '../components/books-dashboard/books-dashboard.component.scss';
-@import '../components/navbar/navbar.component.scss';
-@import 'variables/colors.scss'
+@import '~wolox-equalizer/equalizer';
+@import 'variables/colors';
+@import '../components/books-dashboard/books-dashboard.component';
+@import '../components/navbar/navbar.component';
