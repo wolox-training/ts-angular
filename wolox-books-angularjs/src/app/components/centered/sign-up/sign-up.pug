@@ -4,11 +4,11 @@
     .form-group
       label.form-label {{'signUp.name' | translate}}
       input.form-input(type='text' name='name' ng-model='user.name' required)
-      span.error(ng-show='userForm.name.$invalid && userForm.name.$touched') {{'signUp.requiredField' | translate}}
+      span.error(ng-show='userForm.name.$invalid && userForm.name.$touched') {{'requiredField' | translate}}
     .form-group
       label.form-label Usuario
       input.form-input(type='text' name='username' ng-model='user.username' required)
-      span.error(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'signUp.requiredField' | translate}}
+      span.error(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'requiredField' | translate}}
     .form-group
       label.form-label {{'signUp.email' | translate}}
       input.form-input(type='email' name='email' ng-model='user.email' required)
