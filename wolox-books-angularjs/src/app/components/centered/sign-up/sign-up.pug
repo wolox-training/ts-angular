@@ -2,13 +2,13 @@
   img.title-img(src='../../assets/wbooks_logo.svg' alt='wolox-logo')
   form.main-form(novalidate name='userForm')
     .form-group
-      label.form-label {{'signUp.name' | translate}}
-      input.form-input(type='text' name='name' ng-model='user.name' required)
-      span.error(ng-show='userForm.name.$invalid && userForm.name.$touched') {{'signUp.requiredField' | translate}}
+      label.form-label {{'signUp.firstName' | translate}}
+      input.form-input(type='text' name='firstName' ng-model='user.firstName' required)
+      span.error(ng-show='userForm.firstName.$invalid && userForm.firstName.$touched') {{'signUp.requiredField' | translate}}
     .form-group
-      label.form-label Usuario
-      input.form-input(type='text' name='username' ng-model='user.username' required)
-      span.error(ng-show='userForm.username.$invalid && userForm.username.$touched') {{'signUp.requiredField' | translate}}
+      label.form-label {{'signUp.lastName' | translate}}
+      input.form-input(type='text' name='lastName' ng-model='user.lastName' required)
+      span.error(ng-show='userForm.lastName.$invalid && userForm.lastName.$touched') {{'signUp.requiredField' | translate}}
     .form-group
       label.form-label {{'signUp.email' | translate}}
       input.form-input(type='email' name='email' ng-model='user.email' required)
