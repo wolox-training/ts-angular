@@ -19,17 +19,13 @@ angular.module('app').service('userService', ['$http', 'configuration',
     }
 
     this.login = () => {
-      $http.post(`${configuration.apiUrl}/users/sessions`, loginJson).then(function (response) {
-        console.log(response.data);
-      });
+      return $http.post(`${configuration.apiUrl}/users/sessions`, loginJson);
     }
 
     this.signUp = () => {
-      $http.post(`${configuration.apiUrl}/users`, signUpJson).then(res => {
-        console.log(res.data);
-      }).catch(res => {
-        console.log(res);
-      });
+      this.signUp = () => {
+        return $http.post(`${configuration.apiUrl}/users`, signUpJson);
+      }
     }
   }
 ]);
