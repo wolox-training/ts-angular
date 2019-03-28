@@ -1,6 +1,5 @@
 $no-book-img-size: 70px;
 $search-icon-size: 25px;
-$search-icon-container-size: 40px;
 $book-height: 180px;
 $book-width: 130px;
 
@@ -69,15 +68,14 @@ $book-width: 130px;
 .search-icon {
   height: $search-icon-size;
   width: $search-icon-size;
+  margin: 0 10px;
 }
 
 .search-icon-container {
   align-items: center;
   background-color: $green;
   display: flex;
-  height: $search-icon-container-size;
   justify-content: center;
-  width: $search-icon-container-size;
 }
 
 .search-input-container {
