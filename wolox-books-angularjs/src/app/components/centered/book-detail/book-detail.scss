@@ -53,6 +53,10 @@ $user-image-size: 40px;
       font-size: 14px;
       margin-top: 15px;
     }
+
+    .blue-btn {
+      margin-top: auto;
+    }
   }
 
   .book-img {
@@ -141,10 +145,7 @@ $user-image-size: 40px;
       width: 100%;
     }
 
-    .send-btn {
-      @extend %base-btn;
-      background: $green;
-      font-size: 16px;
+    .green-btn {
       margin: 20px 0;
     }
   }
