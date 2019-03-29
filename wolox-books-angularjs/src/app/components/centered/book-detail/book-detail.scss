@@ -1,10 +1,9 @@
-$book-height: 370px;
-$book-width: 290px;
 $book-img-height: 275px;
-$book-img-width: 195px;
-
+$book-img-width: 600px;
+$no-book-size: 120px;
 $sugg-book-height: 125px;
 $sugg-book-width: 90px;
+$user-image-size: 40px;
 
 .details-container {
   display: flex;
@@ -54,36 +53,23 @@ $sugg-book-width: 90px;
       font-size: 14px;
       margin-top: 15px;
     }
+
+    .blue-btn {
+      margin-top: auto;
+    }
   }
 
-  .book {
+  .book-img {
+    height: $book-img-height;
+    width: $book-img-width;
+    align-items: center;
+    background-color: $grey;
     display: flex;
-    flex-direction: column;
-    height: $book-height;
-    width: $book-width;
-
-    .no-book  {
-      height: $book-height;
-      width: $book-width;
-    }
-
-    .book-img {
-      height: $book-img-height;
-      width: $book-img-width;
-    }
-
+    justify-content: center;
+  
     .no-book-img {
-      align-items: center;
-      background-color: $grey;
-      display: flex;
-      height: $book-img-height;
-      justify-content: center;
-      width: $book-img-width;
-
-      .book-img {
-        height: 120px;
-        width: 120px;
-      }
+      height: $no-book-size;
+      width: $no-book-size;
     }
   }
 }
@@ -93,44 +79,25 @@ $sugg-book-width: 90px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 20px;
-  padding-right: 0 15px 20px;
+  padding: 0 15px 20px;
 
   .books-list {
     display: flex;
     flex-wrap: wrap;
 
     .book {
-      display: flex;
-      flex-direction: column;
       margin: 5px 30px 10px 20px;
 
       .book-img {
-        height: $sugg-book-height;
-        width: $sugg-book-width;
-      }
-
-      .book-title {
-        font-weight: bold;
-        margin-top: 20px;
-      }
-
-      .book-author {
-        font-size: 12px;
-        margin-top: 10px;
-      }
-
-      .no-book-img {
         align-items: center;
         background-color: $grey;
         display: flex;
-        height: $sugg-book-height;
         justify-content: center;
+        height: $sugg-book-height;
         width: $sugg-book-width;
 
-        .book-img {
-          height: $no-book-img-size;
-          width: $no-book-img-size;
+        .no-book-img {
+          padding: 10px;
         }
       }
     }
@@ -145,8 +112,8 @@ $sugg-book-width: 90px;
 }
 
 .user-img {
-  height: 40px;
-  width: 40px;
+  height: $user-image-size;
+  width: $user-image-size;
 }
 
 .book-comments {
@@ -178,10 +145,7 @@ $sugg-book-width: 90px;
       width: 100%;
     }
 
-    .send-btn {
-      @extend %base-btn;
-      background: $green;
-      font-size: 16px;
+    .green-btn {
       margin: 20px 0;
     }
   }
