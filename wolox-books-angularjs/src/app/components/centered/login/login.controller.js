@@ -3,7 +3,7 @@ angular.module('app').controller('LoginController', [ 'userService', '$scope', '
     this.submit = () => {
       if ($scope.userForm.$valid) {
         userService.login({ session: $scope.user }).then(res => {
-          localStorageService.set('access_token', res.data.access_token);
+          localStorageService.set('accessToken', res.data.access_token);
           $state.transitionTo('centered.dashboard');
         });
       }

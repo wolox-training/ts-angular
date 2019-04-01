@@ -10,7 +10,7 @@ angular.module('app').service('userService', ['$http', 'configuration', 'localSt
     }
 
     this.isLoggedIn = () => {
-      return !!localStorageService.get('access_token');
+      return !!localStorageService.get('accessToken');
     }
   }
 ]);
