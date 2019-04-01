@@ -66,11 +66,13 @@ $user-image-size: 40px;
     background-color: $grey;
     display: flex;
     justify-content: center;
-  
-    .no-book-img {
-      height: $no-book-size;
-      width: $no-book-size;
-    }
+  }
+    
+  .no-book-img {
+    height: $book-img-height;
+    width: 450px;
+    background-color: $grey;
+    padding: 50px;
   }
 }
 
@@ -89,16 +91,15 @@ $user-image-size: 40px;
       margin: 5px 30px 10px 20px;
 
       .book-img {
-        align-items: center;
-        background-color: $grey;
-        display: flex;
-        justify-content: center;
         height: $sugg-book-height;
         width: $sugg-book-width;
+      }
 
-        .no-book-img {
-          padding: 10px;
-        }
+      .no-book-img {
+        background-color: $grey;
+        padding: 15px;
+        height: $sugg-book-height;
+        width: $sugg-book-width;
       }
     }
   }
