@@ -1,29 +1,12 @@
 angular.module('app').service('userService', ['$http', 'configuration', 'localStorageService',
   function($http, configuration, localStorageService) {
-    const signUpJson = {
-      user: {
-        email: 'test@test.test',
-        password: '12345678a',
-        password_confirmation: '12345678a',
-        first_name: 'a',
-        last_name: 'a',
-        locale: "en"
-      }
+    
+    this.login = user => {
+      return $http.post(`${configuration.apiUrl}/users/sessions`, user);
     }
 
-    const loginJson = {
-      session: {
-        email: 'test@test.test',
-        password: '12345678a'
-      }
-    }
-
-    this.login = () => {
-      return $http.post(`${configuration.apiUrl}/users/sessions`, loginJson);
-    }
-
-    this.signUp = () => {
-      return $http.post(`${configuration.apiUrl}/users`, signUpJson);
+    this.signUp = user => {
+      return $http.post(`${configuration.apiUrl}/users`, user);
     }
 
     this.isLoggedIn = () => {
