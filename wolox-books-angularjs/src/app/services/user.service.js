@@ -1,5 +1,5 @@
-angular.module('app').service('userService', ['$http', 'configuration',
-  function($http, configuration) {
+angular.module('app').service('userService', ['$http', 'configuration', 'localStorageService',
+  function($http, configuration, localStorageService) {
     const signUpJson = {
       user: {
         email: 'test@test.test',
@@ -23,9 +23,11 @@ angular.module('app').service('userService', ['$http', 'configuration',
     }
 
     this.signUp = () => {
-      this.signUp = () => {
-        return $http.post(`${configuration.apiUrl}/users`, signUpJson);
-      }
+      return $http.post(`${configuration.apiUrl}/users`, signUpJson);
+    }
+
+    this.isLoggedIn = () => {
+      return !!localStorageService.get('access_token');
     }
   }
 ]);
