@@ -37,6 +37,12 @@ $book-height: 180px;
         font-size: 12px;
         margin-top: 10px;
       }
+
+      .no-book-img {
+        background-color: $grey;
+        padding: 25px;
+        height: $book-height;
+      }
     }
   }
 }

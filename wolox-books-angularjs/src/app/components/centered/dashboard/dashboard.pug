@@ -9,7 +9,6 @@
   .books
     .book(ng-repeat='book in dashboardCtrl.books | filter : {[critFilter.code]: dashboardCtrl.query}' ui-sref='centered.book-detail({ bookId: book.id })')
       img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img')
-      .book-img(ng-if='!book.image_url')
-        img(src='../../assets/default_book.svg' alt='no-book')
+      img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book')
       span.book-title {{book.title}}
       span.book-author {{book.author}}

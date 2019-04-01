@@ -3,8 +3,7 @@ a.return(ui-sref='centered.dashboard')
 .details-container
   .book-details-container
     img.book-img(ng-if='bookDetailCtrl.book.image_url' src='{{bookDetailCtrl.book.image_url}}' alt='book-img')
-    .book-img(ng-if='!bookDetailCtrl.book.image_url')
-      img.no-book-img(src='../../assets/default_book.svg' alt='no-book')
+    img.no-book-img(ng-if='!bookDetailCtrl.book.image_url' src='../../assets/default_book.svg' alt='no-book')
     .book-info
       span.book-title {{bookDetailCtrl.book.title}}
       span.book-item.book-author {{bookDetailCtrl.book.author}}
@@ -17,8 +16,7 @@ a.return(ui-sref='centered.dashboard')
     .books-list
       .book(ng-repeat='book in bookDetailCtrl.books')
         img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img')
-        .book-img(ng-if='!book.image_url')
-          img.no-book-img(src='../../assets/default_book.svg' alt='no-book')
+        img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book')
   .book-comments
     span.details-title {{'BookDetail.comments' | translate}}
     .comment-container
