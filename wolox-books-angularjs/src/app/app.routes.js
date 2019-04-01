@@ -1,7 +1,7 @@
 angular.module('app').config([
   '$stateProvider', '$urlRouterProvider', '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    
+
     // For any unmatched urls
     $urlRouterProvider.otherwise(($injector) => {
       $injector.get('$state').go('centered.login');
