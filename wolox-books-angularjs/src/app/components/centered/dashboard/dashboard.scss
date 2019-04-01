@@ -1,7 +1,5 @@
-$no-book-img-size: 70px;
 $search-icon-size: 25px;
 $book-height: 180px;
-$book-width: 130px;
 
 .dashboard-container {
   display: flex;
@@ -20,11 +18,14 @@ $book-width: 130px;
       display: flex;
       flex-direction: column;
       margin: 40px 40px 40px 0;
-      width: 150px;
+      width: 130px;
 
       .book-img {
+        align-items: center;
+        background-color: $grey;
+        display: flex;
         height: $book-height;
-        width: $book-width;
+        justify-content: center;
       }
 
       .book-title {
@@ -35,20 +36,6 @@ $book-width: 130px;
       .book-author {
         font-size: 12px;
         margin-top: 10px;
-      }
-
-      .no-book-img {
-        align-items: center;
-        background-color: $grey;
-        display: flex;
-        height: $book-height;
-        justify-content: center;
-        width: $book-width;
-
-        .book-img {
-          height: $no-book-img-size;
-          width: $no-book-img-size;
-        }
       }
     }
   }
