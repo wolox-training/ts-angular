@@ -1,5 +1,5 @@
 $book-img-height: 275px;
-$book-img-width: 600px;
+$book-img-width: 250px;
 $no-book-size: 120px;
 $sugg-book-height: 125px;
 $sugg-book-width: 90px;
@@ -61,16 +61,14 @@ $user-image-size: 40px;
 
   .book-img {
     height: $book-img-height;
-    width: $book-img-width;
-    align-items: center;
-    background-color: $grey;
-    display: flex;
-    justify-content: center;
+    max-width: $book-img-width;
+    width: 100%;
   }
     
   .no-book-img {
     height: $book-img-height;
-    width: 450px;
+    max-width: $book-img-width;
+    width: 100%;
     background-color: $grey;
     padding: 50px;
   }
