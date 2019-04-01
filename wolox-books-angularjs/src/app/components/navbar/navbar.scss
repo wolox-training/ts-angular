@@ -1,7 +1,34 @@
 .navbar-container {
   padding: 20px;
   box-shadow: 0 0 8px 0 $light-grey;
+  display: flex;
+
   .navbar-img {
     height: 45px;
+  }
+
+  .nav-options {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+
+    .option-img {
+      margin-right: 25px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .user-menu {
+    position: relative;
+
+    .user-dropdown {
+      position: absolute;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      left: -32px;
+      top: 42px;
+    }
   }
 }
