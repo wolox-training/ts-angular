@@ -1,6 +1,6 @@
 angular.module('app').service('userService', ['$http', 'configuration', 'localStorageService',
   function($http, configuration, localStorageService) {
-    
+
     this.login = user => {
       return $http.post(`${configuration.apiUrl}/users/sessions`, user);
     }
