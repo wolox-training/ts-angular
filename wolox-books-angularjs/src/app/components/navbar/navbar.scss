@@ -22,13 +22,26 @@
   .user-menu {
     position: relative;
 
-    .user-dropdown {
+    .user-options {
       position: absolute;
       width: 100px;
       display: flex;
       flex-direction: column;
-      left: -32px;
+      left: -92px;
       top: 42px;
+
+      .menu-link {
+        display: flex;
+        justify-content: flex-start;
+        height: 35px;
+        width: 130px;
+        padding: 10px;
+        background-color: $white;
+
+        &:hover {
+          background: $lightblue;
+        }
+      }
     }
   }
 }
