@@ -1,10 +1,10 @@
 .navbar-container
-  img.navbar-img(src='../../../assets/wbooks_logo.svg' alt='wolox-logo')
+  img.navbar-img(src='../../../assets/wbooks_logo.svg' alt='wolox-logo' ng-click='$ctrl.goToDashboard()')
   .nav-options
     img.option-img(src='../../../assets/notifications.svg' alt='notification')
     img.option-img(src='../../../assets/add_book.svg' alt='add-book')
     .user-menu
       img.option-img(src='../../../assets/default_book.svg' alt='user-img' ng-click='$ctrl.toggleMenu()')
       .user-options(ng-if='$ctrl.showMenu')
-        a.menu-link Perfil
-        a.menu-link Cerrar sesión
+        a.menu-link {{'Navbar.profile' | translate}}
+        a.menu-link(ng-click='$ctrl.logOut()') {{'Navbar.logout' | translate}}

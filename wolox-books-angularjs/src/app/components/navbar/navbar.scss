@@ -24,17 +24,16 @@
 
     .user-options {
       position: absolute;
-      width: 100px;
+      width: 130px;
       display: flex;
       flex-direction: column;
       left: -92px;
       top: 42px;
+      box-shadow: 0 0 5px 0 $light-grey;
 
       .menu-link {
         display: flex;
         justify-content: flex-start;
-        height: 35px;
-        width: 130px;
         padding: 10px;
         background-color: $white;
 
