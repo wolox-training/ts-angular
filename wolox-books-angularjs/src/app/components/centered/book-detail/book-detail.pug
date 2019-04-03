@@ -14,7 +14,10 @@ a.return(ui-sref='centered.dashboard')
         |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut
         |  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
         |  laboris nisi ut aliquip ex ea commodo consequat.
-      button.blue-btn(ng-click='bookDetailCtrl.rent()') {{'BookDetail.rent' | translate}}
+      span(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState === 'USER_RENTED'") Devolver antes del xx/xx/xx
+      span(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState === 'RENTED'") No se encuentra disponible
+      button.blue-btn(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState === 'AVAILABLE'") {{'BookDetail.rent' | translate}}
+      button.green-btn(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState === 'RENTED'") WISHLIST
   .book-suggestions
     span.details-title {{'BookDetail.suggestions' | translate}}
     .books-list

@@ -1,5 +1,8 @@
-angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService',
-  function ($stateParams, booksService, userService) {
+angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService', 'localStorageService',
+  function ($stateParams, booksService, userService, localStorageService) {
+    this.bookState = 'RENTED'
+    this.userId = localStorageService.get('userId')
+
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
       console.log('details data: ', res.data)
@@ -7,6 +10,10 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
 
     booksService.getRent($stateParams.bookId).then(res => {
       console.log('rent data: ', res.data)
+      if (!res.data.length) return this.bookState = 'AVAILABLE';
+      if (res.data[0].user.id === this.userId) return this.bookState = 'USER_RENTED';
+      this.bookState = 'RENTED'
+      console.log(this.bookState);
     })
 
     this.comments = [
@@ -37,8 +44,20 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
     ];
 
     this.rent = () => {
-      userService.rentBook($stateParams.bookId).then(res => {
+
+      const rentObj = {
+        rent: {
+          user_id: this.userId,
+          book_id: $stateParams.bookId,
+          from: "2016-09-14",
+          to: "2026-11-18",
+          returned_at: null
+        }
+      }
+
+      userService.rentBook(rentObj).then(res => {
         console.log(res);
+        this.bookState = 'USER_RENTED';
       })
     }
   }
