@@ -9,5 +9,9 @@ angular.module('app').service('booksService', ['$http', 'configuration', 'localS
     this.getBook = id => {
       return $http.get(`${configuration.apiUrl}/books/${id}`, authHeader);
     }
+
+    this.getRent = id => {
+      return $http.get(`${configuration.apiUrl}/books/${id}/rents`, authHeader);
+    }
   }
 ]);

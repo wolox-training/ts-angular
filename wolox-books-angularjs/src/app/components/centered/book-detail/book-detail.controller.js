@@ -5,6 +5,10 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
       console.log('details data: ', res.data)
     })
 
+    booksService.getRent($stateParams.bookId).then(res => {
+      console.log('rent data: ', res.data)
+    })
+
     this.comments = [
       {
         name: 'Name surname',
