@@ -1,7 +1,8 @@
-angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService',
-  function ($stateParams, booksService) {
+angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService',
+  function ($stateParams, booksService, userService) {
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
+      console.log('details data: ', res.data)
     })
 
     this.comments = [
@@ -30,5 +31,11 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       }
     ];
+
+    this.rent = () => {
+      userService.rentBook($stateParams.bookId).then(res => {
+        console.log(res);
+      })
+    }
   }
 ]);
