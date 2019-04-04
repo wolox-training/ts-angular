@@ -33,5 +33,9 @@ angular.module('app').service('userService', ['$http', 'configuration', 'localSt
     this.getUserWishes = id => {
       return $http.get(`${configuration.apiUrl}/users/${id}/wishes`, authHeader);
     }
+
+    this.getUserComments = id => {
+      return $http.get(`${configuration.apiUrl}/users/${id}/comments`, authHeader);
+    }
   }
 ]);
