@@ -15,32 +15,18 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
       this.bookState = 'RENTED'
     })
 
-    this.comments = [
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    booksService.getComments($stateParams.bookId).then(res => {
+      this.comments = [];
+      for (let e in res.data) {
+        this.comments.push({
+          name: res.data[e].user.first_name,
+          date: res.data[e].created_at.substring(0, 10),
+          description: res.data[e].content,
+          userImage: res.data[e].user.image_url
+        })
+        if (e === '3') break;
       }
-    ];
+    })
 
     this.rent = () => {
       if (this.bookState !== 'AVAILABLE') return;
@@ -58,6 +44,10 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
       }).catch(err => {
         this.bookState = 'AVAILABLE';
       })
+    }
+
+    this.addComment = () => {
+
     }
   }
 ]);

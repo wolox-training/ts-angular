@@ -13,5 +13,13 @@ angular.module('app').service('booksService', ['$http', 'configuration', 'localS
     this.getRent = id => {
       return $http.get(`${configuration.apiUrl}/books/${id}/rents`, authHeader);
     }
+
+    this.getComments = id => {
+      return $http.get(`${configuration.apiUrl}/books/${id}/comments`, authHeader);
+    }
+
+    this.addComment = comment => {
+      return $http.post(`${configuration.apiUrl}/books/${comment.book_id}/comments`, comment, authHeader);
+    }
   }
 ]);

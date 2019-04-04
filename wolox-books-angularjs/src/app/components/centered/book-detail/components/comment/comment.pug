@@ -1,5 +1,6 @@
 .user-comment
-  img.user-img(src='{{$ctrl.comment.userImage}}' alt='user-image')
+  img.user-img(ng-if='$ctrl.comment.userImage' src='{{$ctrl.comment.userImage}}' alt='user-image')
+  img.user-img(ng-if='!$ctrl.comment.userImage' src='../../assets/default_book.svg' alt='user-image')
   .comment-info
     span.name {{$ctrl.comment.name}}
     span.date {{$ctrl.comment.date}}
