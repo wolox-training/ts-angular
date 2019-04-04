@@ -58,7 +58,7 @@ angular.module('app').controller('BookDetailController', ['$scope', '$stateParam
     }
 
     booksService.getSuggestions($stateParams.bookId).then(res => {
-      this.booksSuggested = res.data;
+      this.suggestedBooks = res.data;
     })
   }
 ]);

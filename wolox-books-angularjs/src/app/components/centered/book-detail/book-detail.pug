@@ -25,7 +25,7 @@ a.return(ui-sref='centered.dashboard')
   .book-suggestions
     span.details-title {{'BookDetail.suggestions' | translate}}
     .books-list
-      .book(ng-repeat='book in bookDetailCtrl.booksSuggested | limitTo:4')
+      .book(ng-repeat='book in bookDetailCtrl.suggestedBooks | limitTo:4')
         img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img' ui-sref='centered.book-detail({ bookId: book.id })')
         img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book' ui-sref='centered.book-detail({ bookId: book.id })')
   .book-comments
