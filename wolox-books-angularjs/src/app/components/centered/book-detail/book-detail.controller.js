@@ -1,5 +1,5 @@
-angular.module('app').controller('BookDetailController', ['$scope', '$stateParams', 'booksService', 'userService', 'localStorageService', '$state',
-  function ($scope, $stateParams, booksService, userService, localStorageService, $state) {
+angular.module('app').controller('BookDetailController', ['$scope', '$stateParams', 'booksService', 'userService', 'localStorageService',
+  function ($scope, $stateParams, booksService, userService, localStorageService) {
     this.userId = localStorageService.get('userId');
     this.addingMsg = false;
 
