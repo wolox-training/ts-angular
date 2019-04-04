@@ -37,5 +37,5 @@ a.return(ui-sref='centered.dashboard')
         textarea.comment-input(ng-model='comment')
         button(ng-click='bookDetailCtrl.addComment()' ng-class="bookDetailCtrl.addingMsg ? 'disabled-btn' : 'green-btn'")
           |  {{'BookDetail.send' | translate}}
-    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments')
+    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments | limitTo: 4')
       comment(comment='comment')
