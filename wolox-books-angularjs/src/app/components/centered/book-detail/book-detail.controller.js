@@ -44,12 +44,14 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
 
     this.rent = () => {
       if (this.bookState !== 'AVAILABLE') return;
+      let returnDate = new Date();
+      returnDate.setMonth(returnDate.getMonth() + 1);
       const rentObj = {
         rent: {
           user_id: this.userId,
           book_id: $stateParams.bookId,
-          from: "2016-09-14",
-          to: "2026-11-18",
+          from: new Date(),
+          to: returnDate,
           returned_at: null
         }
       }
