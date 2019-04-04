@@ -1,6 +1,7 @@
-angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService', 'localStorageService',
-  function ($stateParams, booksService, userService, localStorageService) {
-    this.userId = localStorageService.get('userId')
+angular.module('app').controller('BookDetailController', ['$scope', '$stateParams', 'booksService', 'userService', 'localStorageService',
+  function ($scope, $stateParams, booksService, userService, localStorageService) {
+    this.userId = localStorageService.get('userId');
+    this.addingMsg = false;
 
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
@@ -47,7 +48,20 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
     }
 
     this.addComment = () => {
-
+      if (!$scope.comment || $scope.comment.length > 255) return;
+      const commentObj = {
+        user_id: this.userId,
+        book_id: $stateParams.bookId,
+        content: $scope.comment,
+        created_at: new Date()
+      };
+      this.addingMsg = true;
+      booksService.addComment(commentObj).then(res => {
+        this.addingMsg = false;
+        $scope.comment = '';
+      }).catch(err => {
+        this.addingMsg = false;
+      })
     }
   }
 ]);
