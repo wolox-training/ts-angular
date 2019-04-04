@@ -17,16 +17,7 @@ angular.module('app').controller('BookDetailController', ['$scope', '$stateParam
     })
 
     booksService.getComments($stateParams.bookId).then(res => {
-      this.comments = [];
-      for (let e in res.data) {
-        this.comments.push({
-          name: res.data[e].user.first_name,
-          date: res.data[e].created_at.substring(0, 10),
-          description: res.data[e].content,
-          userImage: res.data[e].user.image_url
-        })
-        if (e === '3') break;
-      }
+      this.comments = res.data;
     })
 
     this.rent = () => {
