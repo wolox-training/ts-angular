@@ -21,5 +21,9 @@ angular.module('app').service('booksService', ['$http', 'configuration', 'localS
     this.addComment = comment => {
       return $http.post(`${configuration.apiUrl}/books/${comment.book_id}/comments`, comment, authHeader);
     }
+
+    this.getSuggestions = id => {
+      return $http.get(`${configuration.apiUrl}/books/${id}/suggestions`, authHeader);
+    }
   }
 ]);
