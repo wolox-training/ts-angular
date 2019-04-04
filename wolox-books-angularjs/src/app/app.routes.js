@@ -56,6 +56,16 @@ angular.module('app').config([
             controllerAs: 'loginCtrl'
           }
         }
+      })
+      .state('centered.profile', {
+        url: '/profile/{userId}',
+        views: {
+          content: {
+            templateUrl: '../app/components/centered/profile/profile.html',
+            controller: 'ProfileController',
+            controllerAs: 'profileCtrl'
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);
