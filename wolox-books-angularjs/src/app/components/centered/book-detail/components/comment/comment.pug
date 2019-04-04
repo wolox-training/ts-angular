@@ -2,6 +2,8 @@
   img.user-img(ng-if='$ctrl.comment.user.image_url' src='{{$ctrl.comment.user.image_url}}' alt='user-image')
   img.user-img(ng-if='!$ctrl.comment.user.image_url' src='../../assets/default_book.svg' alt='user-image')
   .comment-info
-    span.name {{$ctrl.comment.user.first_name}} {{$ctrl.comment.user.last_name}}
+    .comment-header
+      span.name {{$ctrl.comment.user.first_name}} {{$ctrl.comment.user.last_name}}
+      span.book-title(ng-if='$ctrl.showBookTitle') {{$ctrl.comment.book.title}}
     span.date {{$ctrl.comment.created_at.substring(0,10)}}
     span.description {{$ctrl.comment.content}}

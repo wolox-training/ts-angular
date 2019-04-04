@@ -17,4 +17,4 @@ navbar
   .book-comments
     span.details-title Comentarios
     .saved-comments-container(ng-repeat='comment in profileCtrl.comments | limitTo: 4')
-      comment(comment='comment')
+      comment(comment='comment' showBookTitle=true)
