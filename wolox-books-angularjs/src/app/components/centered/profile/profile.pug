@@ -1,5 +1,17 @@
 navbar
 .dashboard-container
+  .profile-header
+    img.user-img(src='../../assets/default_book.svg' alt='no-book')
+    .user-data
+      span.user-name Comentarios
+      span.user-email a@a.com
+      .books-info
+        span.read
+          span.quantity 4
+          |  leidos
+        span.commented
+          span.quantity 4
+          |  comentarios
   span.details-title Leidos
   .books
     .book(ng-repeat='rent in profileCtrl.rents')
@@ -8,7 +20,7 @@ navbar
       span.book-title {{rent.book.title}}
       span.book-author {{rent.book.author}}
   span.details-title Wishlist
-  .books
+  .books.wishes
     .book(ng-repeat='wish in profileCtrl.wishes')
       img.book-img(ng-if='wish.book.image_url' src='{{wish.book.image_url}}' alt='book-img')
       img.no-book-img(ng-if='!wish.book.image_url' src='../../assets/default_book.svg' alt='no-book')
