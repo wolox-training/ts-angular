@@ -14,7 +14,6 @@ angular.module('app').controller('ProfileController', ['userService', '$statePar
 
     userService.getUserComments($stateParams.userId).then(res => {
       this.comments = res.data;
-      console.log(this.comments);
     })
   }
 ]);

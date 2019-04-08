@@ -7,16 +7,27 @@
     flex-direction: column;
     margin-left: 10px;
     width: 100%;
+
     .comment-header {
       display: flex;
+
       .name {
         font-size: 14px;
         font-weight: bold;
         margin: 5px 0;
       }
+
       .book-title {
         margin-left: auto;
       }
+
+      .book-title {
+        color: $ribbon-blue;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      
     }
 
     .date {
