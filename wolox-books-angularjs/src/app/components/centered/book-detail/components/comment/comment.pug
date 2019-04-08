@@ -3,7 +3,7 @@
   img.user-img(ng-if='!$ctrl.comment.user.image_url' src='../../assets/default_book.svg' alt='user-image')
   .comment-info
     .comment-header
-      span.name {{$ctrl.comment.user.first_name}} {{$ctrl.comment.user.last_name}}
+      span.name(ui-sref='centered.profile({ userId: $ctrl.comment.user.id })') {{$ctrl.comment.user.first_name}} {{$ctrl.comment.user.last_name}}
       span.book-title(ng-if='$ctrl.title' ui-sref='centered.book-detail({ bookId: $ctrl.comment.book.id })') {{$ctrl.comment.book.title}}
     span.date {{$ctrl.comment.created_at.substring(0,10)}}
     span.description {{$ctrl.comment.content}}
