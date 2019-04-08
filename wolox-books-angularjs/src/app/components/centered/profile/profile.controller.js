@@ -2,6 +2,7 @@ angular.module('app').controller('ProfileController', ['userService', '$statePar
   function (userService, $stateParams) {
     userService.getInfo($stateParams.userId).then(res => {
       this.userInfo = res.data;
+      console.log('user dataaa: ', this.userInfo)
     })
 
     userService.getUserRents($stateParams.userId).then(res => {
