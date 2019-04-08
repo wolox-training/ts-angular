@@ -23,13 +23,13 @@ a.return(ui-sref='centered.dashboard')
       button(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState !== 'RENTED'" ng-class="(bookDetailCtrl.bookState === 'AVAILABLE') ? 'blue-btn' : 'disabled-btn'")
         |  {{'BookDetail.rent' | translate}}
   .book-suggestions
-    span.details-title {{'BookDetail.suggestions' | translate}}
+    span.main-title {{'BookDetail.suggestions' | translate}}
     .books-list
       .book(ng-repeat='book in bookDetailCtrl.suggestedBooks | limitTo:4')
         img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img' ui-sref='centered.book-detail({ bookId: book.id })')
         img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book' ui-sref='centered.book-detail({ bookId: book.id })')
   .book-comments
-    span.details-title {{'BookDetail.comments' | translate}}
+    span.main-title {{'BookDetail.comments' | translate}}
     .comment-container
       img.user-img(src='../../assets/default_book.svg' alt='no-book')
       .comment-input-container
