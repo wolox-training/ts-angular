@@ -12,7 +12,8 @@ angular.module('app').config([
         send: 'Enviar',
         wishlist: 'Wishlist',
         unavailable: 'No se encuentra disponible',
-        returnBefore: 'Devolver antes de'
+        returnBefore: 'Devolver antes de',
+        msgError: 'El mensaje debe tener entre 1 y 255 caracteres'
       }
     });
   }

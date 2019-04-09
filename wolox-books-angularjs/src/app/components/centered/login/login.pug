@@ -2,11 +2,11 @@
   img.title-img(src='../../assets/wbooks_logo.svg' alt='wolox-logo')
   form.main-form(novalidate name='userForm')
     .form-group
-      label.form-label Email
+      label.form-label {{'login.email' | translate}}
       input.form-input(type='text' name='email' ng-model='user.email' required)
       span.error(ng-show='userForm.email.$invalid && userForm.email.$touched') {{'requiredField' | translate}}
     .form-group
       label.form-label {{'signUp.password' | translate}}
       input.form-input(type='password' ng-model='user.password' name='password' required)
       span.error(ng-show='userForm.password.$invalid && userForm.password.$touched') {{'requiredField' | translate}}
-    button.blue-btn(type='submit' ng-click='loginCtrl.submit()') Login
+    button.blue-btn(type='submit' ng-click='loginCtrl.submit()') {{'login.login' | translate}}

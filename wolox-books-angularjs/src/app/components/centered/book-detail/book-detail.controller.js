@@ -1,19 +1,23 @@
-angular.module('app').controller('BookDetailController', ['$scope', '$stateParams', 'booksService', 'userService', 'localStorageService',
-  function ($scope, $stateParams, booksService, userService, localStorageService) {
+angular.module('app').controller('BookDetailController', ['$scope','$stateParams', 'booksService', 'userService', 'localStorageService', 'constants',
+  function ($scope, $stateParams, booksService, userService, localStorageService, constants) {
     this.userId = localStorageService.get('userId');
+    this.RENTED = constants.RENTED;
+    this.USER_RENTED = constants.USER_RENTED;
+    this.AVAILABLE = constants.AVAILABLE;
     this.addingMsg = false;
+    this.showError = false;
 
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
     })
 
     booksService.getRent($stateParams.bookId).then(res => {
-      if (!res.data.length) return this.bookState = 'AVAILABLE';
+      if (!res.data.length) return this.bookState = this.AVAILABLE;
       if (res.data[0].user.id === this.userId) {
         this.returnDate = res.data[0].to;
-        return this.bookState = 'USER_RENTED';
+        return this.bookState = this.USER_RENTED;
       }
-      this.bookState = 'RENTED'
+      this.bookState = this.RENTED;
     })
 
     booksService.getComments($stateParams.bookId).then(res => {
@@ -21,7 +25,7 @@ angular.module('app').controller('BookDetailController', ['$scope', '$stateParam
     })
 
     this.rent = () => {
-      if (this.bookState !== 'AVAILABLE') return;
+      if (this.bookState !== this.AVAILABLE) return;
       let returnDate = new Date();
       returnDate.setMonth(returnDate.getMonth() + 1);
       const rentObj = {
@@ -33,15 +37,14 @@ angular.module('app').controller('BookDetailController', ['$scope', '$stateParam
           returned_at: null
         }
       }
-      this.bookState = 'USER_RENTED';
+
       userService.rentBook(rentObj).then(res => {
-      }).catch(err => {
-        this.bookState = 'AVAILABLE';
+        this.bookState = this.USER_RENTED;
       })
     }
 
     this.addComment = () => {
-      if (!$scope.comment || $scope.comment.length > 255) return;
+      if (!$scope.comment || $scope.comment.length > 255) return this.showError = true;
       const commentObj = {
         user_id: this.userId,
         book_id: $stateParams.bookId,

@@ -54,7 +54,10 @@ $user-image-size: 40px;
       margin-top: 15px;
     }
 
-    .blue-btn, .disabled-btn, .green-btn, .warning {
+    .blue-btn,
+    .disabled-btn,
+    .green-btn,
+    .warning {
       margin-top: auto;
     }
 
@@ -117,6 +120,7 @@ $user-image-size: 40px;
 .user-img {
   height: $user-image-size;
   width: $user-image-size;
+  object-fit: contain;
 }
 
 .book-comments {
@@ -150,6 +154,11 @@ $user-image-size: 40px;
 
     .green-btn, .disabled-btn {
       margin: 20px 0;
+    }
+
+    .error {
+      margin-top: 10px;
+      color: $red;
     }
   }
 }
