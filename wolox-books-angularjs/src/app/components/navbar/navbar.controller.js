@@ -10,10 +10,6 @@ function NavbarController($state, localStorageService) {
     this.showMenu = !this.showMenu;
   }
 
-  this.goToDashboard = () => {
-    $state.transitionTo('centered.dashboard');
-  }
-
   this.logOut = () => {
     localStorageService.remove('accessToken');
     $state.transitionTo('centered.login');
