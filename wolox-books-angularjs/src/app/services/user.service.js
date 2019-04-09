@@ -2,24 +2,14 @@ angular.module('app').service('userService', ['$http', 'configuration', 'localSt
   function($http, configuration, localStorageService) {
     const authHeader = { headers: { Authorization: `Bearer ${localStorageService.get('accessToken')}`}};
 
-    this.login = user => {
-      return $http.post(`${configuration.apiUrl}/users/sessions`, user);
-    }
+    this.login = user => $http.post(`${configuration.apiUrl}/users/sessions`, user);
 
-    this.signUp = user => {
-      return $http.post(`${configuration.apiUrl}/users`, user);
-    }
+    this.signUp = user => $http.post(`${configuration.apiUrl}/users`, user);
 
-    this.isLoggedIn = () => {
-      return !!localStorageService.get('accessToken');
-    }
+    this.isLoggedIn = () => !!localStorageService.get('accessToken');
 
-    this.getUserInfo = () => {
-      return $http.get(`${configuration.apiUrl}/users/me`, authHeader);
-    }
+    this.getUserInfo = () => $http.get(`${configuration.apiUrl}/users/me`, authHeader);
 
-    this.rentBook = rentObj => {
-      return $http.post(`${configuration.apiUrl}/users/${localStorageService.get('userId')}/rents`, rentObj, authHeader);
-    }
+    this.rentBook = rentObj => $http.post(`${configuration.apiUrl}/users/${localStorageService.get('userId')}/rents`, rentObj, authHeader);
   }
 ]);
