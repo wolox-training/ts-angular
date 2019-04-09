@@ -1,5 +1,6 @@
 .navbar-container
-  img.navbar-img(src='../../../assets/wbooks_logo.svg' alt='wolox-logo' ng-click='$ctrl.goToDashboard()')
+  a(ng-click='$ctrl.goToDashboard()')
+    img.navbar-img(src='../../../assets/wbooks_logo.svg' alt='wolox-logo')
   .nav-options
     img.option-img(src='../../../assets/notifications.svg' alt='notification')
     img.option-img(src='../../../assets/add_book.svg' alt='add-book')
