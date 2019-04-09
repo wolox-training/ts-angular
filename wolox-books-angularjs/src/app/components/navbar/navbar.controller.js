@@ -1,9 +1,9 @@
 angular.module('app').component('navbar', {
   templateUrl: 'app/components/navbar/navbar.html',
-  controller: ['$state', 'localStorageService', NavbarController]
+  controller: ['$state', 'localStorageService', 'userService', NavbarController]
 });
 
-function NavbarController($state, localStorageService) {
+function NavbarController($state, localStorageService, userService) {
   this.showMenu = false;
   this.userId = localStorageService.get('userId');
 
@@ -15,4 +15,9 @@ function NavbarController($state, localStorageService) {
     localStorageService.remove('accessToken');
     $state.transitionTo('centered.login');
   }
+
+  userService.getNotifications().then(res => {
+    this.notifications = res.data;
+    this.notificationsCounter = res.data.length;
+  })
 }

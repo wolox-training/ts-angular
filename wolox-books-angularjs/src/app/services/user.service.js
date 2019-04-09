@@ -19,5 +19,7 @@ angular.module('app').service('userService', ['$http', 'configuration', 'localSt
     this.getUserWishes = id => $http.get(`${configuration.apiUrl}/users/${id}/wishes`, authHeader);
 
     this.getUserComments = id => $http.get(`${configuration.apiUrl}/users/${id}/comments`, authHeader);
+
+    this.getNotifications = () => $http.get(`${configuration.apiUrl}/users/${localStorageService.get('userId')}/notifications`, authHeader)
   }
 ]);
