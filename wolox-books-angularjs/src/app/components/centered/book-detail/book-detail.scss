@@ -54,8 +54,15 @@ $user-image-size: 40px;
       margin-top: 15px;
     }
 
-    .blue-btn {
+    .blue-btn,
+    .disabled-btn,
+    .green-btn,
+    .warning {
       margin-top: auto;
+    }
+
+    .warning {
+      color: $red;
     }
   }
 

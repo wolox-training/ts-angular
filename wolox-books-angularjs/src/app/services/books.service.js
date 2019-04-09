@@ -5,5 +5,7 @@ angular.module('app').service('booksService', ['$http', 'configuration', 'localS
     this.getBooks = () => $http.get(`${configuration.apiUrl}/books`, authHeader);
 
     this.getBook = id => $http.get(`${configuration.apiUrl}/books/${id}`, authHeader);
+
+    this.getRent = id => $http.get(`${configuration.apiUrl}/books/${id}/rents`, authHeader);
   }
 ]);

@@ -9,7 +9,10 @@ angular.module('app').config([
         suggestions: 'Sugerencias',
         comments: 'Comentarios',
         addComment: 'Agregar un comentario',
-        send: 'Enviar'
+        send: 'Enviar',
+        wishlist: 'Wishlist',
+        unavailable: 'No se encuentra disponible',
+        returnBefore: 'Devolver antes de'
       }
     });
   }

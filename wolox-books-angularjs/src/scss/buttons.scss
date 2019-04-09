@@ -16,3 +16,8 @@
   background: $green;
   font-size: 16px;
 }
+
+.disabled-btn {
+  @extend %base-btn;
+  background: $grey;
+}
