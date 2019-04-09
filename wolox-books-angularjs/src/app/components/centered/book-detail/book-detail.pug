@@ -14,20 +14,22 @@ a.return(ui-sref='centered.dashboard')
         |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut
         |  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
         |  laboris nisi ut aliquip ex ea commodo consequat.
-      span.warning(ng-if="bookDetailCtrl.bookState === 'USER_RENTED'")
+      span.warning(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.USER_RENTED")
         |  {{'BookDetail.returnBefore' | translate}} {{bookDetailCtrl.returnDate}}
-      span.warning(ng-if="bookDetailCtrl.bookState === 'RENTED'")
+      span.warning(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.RENTED")
         |  {{'BookDetail.unavailable' | translate}}
-      button.green-btn(ng-if="bookDetailCtrl.bookState === 'RENTED'")
+      button.green-btn(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.RENTED")
         |  {{'BookDetail.wishlist' | translate}}
-      button(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState !== 'RENTED'" ng-class="(bookDetailCtrl.bookState === 'AVAILABLE') ? 'blue-btn' : 'disabled-btn'")
+      button(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState !== bookDetailCtrl.RENTED" ng-class="(bookDetailCtrl.bookState === bookDetailCtrl.AVAILABLE) ? 'blue-btn' : 'disabled-btn'")
         |  {{'BookDetail.rent' | translate}}
   .book-suggestions
     span.main-title {{'BookDetail.suggestions' | translate}}
     .books-list
       .book(ng-repeat='book in bookDetailCtrl.suggestedBooks | limitTo:4')
-        img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img' ui-sref='centered.book-detail({ bookId: book.id })')
-        img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book' ui-sref='centered.book-detail({ bookId: book.id })')
+        a(ui-sref='centered.book-detail({ bookId: book.id })')
+          img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img')
+        a(ui-sref='centered.book-detail({ bookId: book.id })')
+          img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book')
   .book-comments
     span.main-title {{'BookDetail.comments' | translate}}
     .comment-container
@@ -35,6 +37,7 @@ a.return(ui-sref='centered.dashboard')
       .comment-input-container
         span.add-comment {{'BookDetail.addComment' | translate}}
         textarea.comment-input(ng-model='comment')
+        span.error(ng-if="bookDetailCtrl.showError") {{'BookDetail.msgError' | translate}}
         button(ng-click='bookDetailCtrl.addComment()' ng-class="bookDetailCtrl.addingMsg ? 'disabled-btn' : 'green-btn'")
           |  {{'BookDetail.send' | translate}}
     .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments | limitTo: 4')
