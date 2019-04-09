@@ -152,8 +152,14 @@ $user-image-size: 40px;
       width: 100%;
     }
 
-    .green-btn {
+    .green-btn,
+    .disabled-btn {
       margin: 20px 0;
+    }
+
+    .error {
+      margin-top: 10px;
+      color: $red;
     }
   }
 }

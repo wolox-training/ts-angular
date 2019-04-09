@@ -1,9 +1,11 @@
-angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService', 'localStorageService', 'constants',
-  function ($stateParams, booksService, userService, localStorageService, constants) {
+angular.module('app').controller('BookDetailController', ['$scope','$stateParams', 'booksService', 'userService', 'localStorageService', 'constants',
+  function ($scope, $stateParams, booksService, userService, localStorageService, constants) {
     this.userId = localStorageService.get('userId');
     this.RENTED = constants.RENTED;
     this.USER_RENTED = constants.USER_RENTED;
     this.AVAILABLE = constants.AVAILABLE;
+    this.addingMsg = false;
+    this.showError = false;
 
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
@@ -18,32 +20,9 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
       this.bookState = this.RENTED;
     })
 
-    this.comments = [
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      },
-      {
-        name: 'Name surname',
-        userImage: '../../assets/default_book.svg',
-        date: '01/01/2019',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      }
-    ];
+    booksService.getComments($stateParams.bookId).then(res => {
+      this.comments = res.data;
+    })
 
     this.rent = () => {
       if (this.bookState !== this.AVAILABLE) return;
@@ -61,6 +40,23 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
 
       userService.rentBook(rentObj).then(res => {
         this.bookState = this.USER_RENTED;
+      })
+    }
+
+    this.addComment = () => {
+      if (!$scope.comment || $scope.comment.length > 255) return this.showError = true;
+      const commentObj = {
+        user_id: this.userId,
+        book_id: $stateParams.bookId,
+        content: $scope.comment,
+        created_at: new Date()
+      };
+      this.addingMsg = true;
+      booksService.addComment(commentObj).then(res => {
+        this.addingMsg = false;
+        $scope.comment = '';
+      }).catch(err => {
+        this.addingMsg = false;
       })
     }
   }

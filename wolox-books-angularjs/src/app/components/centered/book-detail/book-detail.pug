@@ -34,7 +34,9 @@ a.return(ui-sref='centered.dashboard')
       img.user-img(src='../../assets/default_book.svg' alt='no-book')
       .comment-input-container
         span.add-comment {{'BookDetail.addComment' | translate}}
-        textarea.comment-input
-        button.green-btn {{'BookDetail.send' | translate}}
-    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments')
+        textarea.comment-input(ng-model='comment')
+        span.error(ng-if="bookDetailCtrl.showError") {{'BookDetail.msgError' | translate}}
+        button(ng-click='bookDetailCtrl.addComment()' ng-class="bookDetailCtrl.addingMsg ? 'disabled-btn' : 'green-btn'")
+          |  {{'BookDetail.send' | translate}}
+    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments | limitTo: 4')
       comment(comment='comment')
