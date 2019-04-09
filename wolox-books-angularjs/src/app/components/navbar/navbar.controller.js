@@ -6,6 +6,7 @@ angular.module('app').component('navbar', {
 function NavbarController($state, localStorageService, userService) {
   this.showMenu = false;
   this.userId = localStorageService.get('userId');
+  this.showingNotifications = false;
 
   this.toggleMenu = () => {
     this.showMenu = !this.showMenu;
@@ -20,4 +21,9 @@ function NavbarController($state, localStorageService, userService) {
     this.notifications = res.data;
     this.notificationsCounter = res.data.length;
   })
+
+  this.showNotifications = () => {
+    if (!this.notificationsCounter) return;
+    this.showingNotifications = true;
+  }
 }

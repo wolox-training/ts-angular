@@ -5,6 +5,7 @@ $option-size: 35px;
   box-shadow: 0 0 8px 0 $light-grey;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 
   .navbar-img {
     height: 45px;
@@ -32,7 +33,7 @@ $option-size: 35px;
 
   .nav-options {
     display: flex;
-    align-items: flex-end;
+    height: $option-size;
   }
 
   .user-menu {
@@ -64,5 +65,4 @@ $option-size: 35px;
 .option-img {
   margin-right: 25px;
   width: $option-size;
-  height: $option-size;
 }
