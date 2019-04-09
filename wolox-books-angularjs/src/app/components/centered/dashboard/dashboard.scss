@@ -1,7 +1,7 @@
 $search-icon-size: 25px;
 $book-height: 180px;
 
-.dashboard-container {
+.main-container  {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -18,7 +18,6 @@ $book-height: 180px;
       display: flex;
       flex-direction: column;
       margin: 40px 40px 40px 0;
-      width: 130px;
 
       .book-img {
         align-items: center;
@@ -26,6 +25,7 @@ $book-height: 180px;
         display: flex;
         height: $book-height;
         justify-content: center;
+        width: 130px;
       }
 
       .book-title {

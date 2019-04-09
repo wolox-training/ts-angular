@@ -11,5 +11,13 @@ angular.module('app').service('userService', ['$http', 'configuration', 'localSt
     this.getUserInfo = () => $http.get(`${configuration.apiUrl}/users/me`, authHeader);
 
     this.rentBook = rentObj => $http.post(`${configuration.apiUrl}/users/${localStorageService.get('userId')}/rents`, rentObj, authHeader);
+
+    this.getInfo = id => $http.get(`${configuration.apiUrl}/users/${id}`, authHeader);
+
+    this.getUserRents = id => $http.get(`${configuration.apiUrl}/users/${id}/rents`, authHeader);
+
+    this.getUserWishes = id => $http.get(`${configuration.apiUrl}/users/${id}/wishes`, authHeader);
+
+    this.getUserComments = id => $http.get(`${configuration.apiUrl}/users/${id}/comments`, authHeader);
   }
 ]);

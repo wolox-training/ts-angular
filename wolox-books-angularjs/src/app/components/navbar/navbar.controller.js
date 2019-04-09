@@ -5,6 +5,7 @@ angular.module('app').component('navbar', {
 
 function NavbarController($state, localStorageService) {
   this.showMenu = false;
+  this.userId = localStorageService.get('userId');
 
   this.toggleMenu = () => {
     this.showMenu = !this.showMenu;

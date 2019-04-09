@@ -7,5 +7,5 @@
     .user-menu
       img.option-img(src='../../../assets/default_book.svg' alt='user-img' ng-click='$ctrl.toggleMenu()')
       .user-options(ng-if='$ctrl.showMenu')
-        a.menu-link {{'Navbar.profile' | translate}}
+        a.menu-link(ui-sref='centered.profile({ userId: $ctrl.userId })') {{'Navbar.profile' | translate}}
         a.menu-link(ng-click='$ctrl.logOut()') {{'Navbar.logout' | translate}}

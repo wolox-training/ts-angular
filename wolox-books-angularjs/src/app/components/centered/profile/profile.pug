@@ -1,0 +1,34 @@
+navbar
+.main-container
+  .profile-header
+    img.user-img(src="{{profileCtrl.userInfo.image_url ? profileCtrl.userInfo.image_url : '../../assets/default_book.svg' }}" alt='no-book')
+    .user-data
+      span.user-name {{profileCtrl.userInfo.first_name}} {{profileCtrl.userInfo.last_name}}
+      span.user-email {{profileCtrl.userInfo.email}}
+      .books-info
+        span.read
+          span.quantity {{profileCtrl.userInfo.rents_counter}}
+          |  {{'profile.read' | translate}}
+        span.commented
+          span.quantity {{profileCtrl.userInfo.comments_counter}}
+          |  {{'profile.comments' | translate}}
+  span.main-title {{'profile.readTitle' | translate}}
+  .books
+    .book(ng-repeat='rent in profileCtrl.rents')
+      a(ui-sref='centered.book-detail({ bookId: rent.book.id })')
+        img.book-img(ng-if='rent.book.image_url' src='{{rent.book.image_url}}' alt='book-img')
+        img.no-book-img(ng-if='!rent.book.image_url' src='../../assets/default_book.svg' alt='no-book')
+      span.book-title {{rent.book.title}}
+      span.book-author {{rent.book.author}}
+  span.main-title {{'profile.wishlist' | translate}}
+  .books.wishes
+    .book(ng-repeat='wish in profileCtrl.wishes')
+      a(ui-sref='centered.book-detail({ bookId: wish.book.id })')
+        img.book-img(ng-if='wish.book.image_url' src='{{wish.book.image_url}}' alt='book-img')
+        img.no-book-img(ng-if='!wish.book.image_url' src='../../assets/default_book.svg' alt='no-book')
+      span.book-title {{wish.book.title}}
+      span.book-author {{wish.book.author}}
+  .book-comments
+    span.main-title {{'profile.commentsTitle' | translate}}
+    .saved-comments-container(ng-repeat='comment in profileCtrl.comments | limitTo: 4')
+      comment(comment='comment' title='true')
