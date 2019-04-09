@@ -1,6 +1,5 @@
 .user-comment
-  img.user-img(ng-if='$ctrl.comment.user.image_url' src='{{$ctrl.comment.user.image_url}}' alt='user-image')
-  img.user-img(ng-if='!$ctrl.comment.user.image_url' src='../../assets/default_book.svg' alt='user-image')
+  img.user-img(src="{{$ctrl.comment.user.image_url? $ctrl.comment.user.image_url : '../../assets/default_book.svg'}}" alt='user-image')
   .comment-info
     .comment-header
       a.name(ui-sref='centered.profile({ userId: $ctrl.comment.user.id })') {{$ctrl.comment.user.first_name}} {{$ctrl.comment.user.last_name}}
