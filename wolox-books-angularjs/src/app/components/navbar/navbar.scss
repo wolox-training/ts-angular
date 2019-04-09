@@ -1,0 +1,48 @@
+$option-size: 35px;
+
+.navbar-container {
+  padding: 20px;
+  box-shadow: 0 0 8px 0 $light-grey;
+  display: flex;
+  justify-content: space-between;
+
+  .navbar-img {
+    height: 45px;
+  }
+
+  .nav-options {
+    display: flex;
+    align-items: flex-end;
+
+    .option-img {
+      margin-right: 25px;
+      width: $option-size;
+      height: $option-size;
+    }
+  }
+
+  .user-menu {
+    position: relative;
+
+    .user-options {
+      position: absolute;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      left: -142px;
+      top: 52px;
+      box-shadow: 0 0 5px 0 $light-grey;
+
+      .menu-link {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        background-color: $white;
+
+        &:hover {
+          background: $lightblue;
+        }
+      }
+    }
+  }
+}
