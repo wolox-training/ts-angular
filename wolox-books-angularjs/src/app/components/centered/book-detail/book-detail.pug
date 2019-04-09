@@ -14,13 +14,13 @@ a.return(ui-sref='centered.dashboard')
         |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut
         |  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
         |  laboris nisi ut aliquip ex ea commodo consequat.
-      span.warning(ng-if="bookDetailCtrl.bookState === 'USER_RENTED'")
+      span.warning(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.USER_RENTED")
         |  {{'BookDetail.returnBefore' | translate}} {{bookDetailCtrl.returnDate}}
-      span.warning(ng-if="bookDetailCtrl.bookState === 'RENTED'")
+      span.warning(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.RENTED")
         |  {{'BookDetail.unavailable' | translate}}
-      button.green-btn(ng-if="bookDetailCtrl.bookState === 'RENTED'")
+      button.green-btn(ng-if="bookDetailCtrl.bookState === bookDetailCtrl.RENTED")
         |  {{'BookDetail.wishlist' | translate}}
-      button(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState !== 'RENTED'" ng-class="(bookDetailCtrl.bookState === 'AVAILABLE') ? 'blue-btn' : 'disabled-btn'")
+      button(ng-click='bookDetailCtrl.rent()' ng-if="bookDetailCtrl.bookState !== bookDetailCtrl.RENTED" ng-class="(bookDetailCtrl.bookState === bookDetailCtrl.AVAILABLE) ? 'blue-btn' : 'disabled-btn'")
         |  {{'BookDetail.rent' | translate}}
   .book-suggestions
     span.details-title {{'BookDetail.suggestions' | translate}}

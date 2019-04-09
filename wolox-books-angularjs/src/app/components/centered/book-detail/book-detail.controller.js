@@ -1,18 +1,21 @@
-angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService', 'localStorageService',
-  function ($stateParams, booksService, userService, localStorageService) {
-    this.userId = localStorageService.get('userId')
+angular.module('app').controller('BookDetailController', ['$stateParams', 'booksService', 'userService', 'localStorageService', 'constants',
+  function ($stateParams, booksService, userService, localStorageService, constants) {
+    this.userId = localStorageService.get('userId');
+    this.RENTED = constants.RENTED;
+    this.USER_RENTED = constants.USER_RENTED;
+    this.AVAILABLE = constants.AVAILABLE;
 
     booksService.getBook($stateParams.bookId).then(res => {
       this.book = res.data;
     })
 
     booksService.getRent($stateParams.bookId).then(res => {
-      if (!res.data.length) return this.bookState = 'AVAILABLE';
+      if (!res.data.length) return this.bookState = this.AVAILABLE;
       if (res.data[0].user.id === this.userId) {
         this.returnDate = res.data[0].to;
-        return this.bookState = 'USER_RENTED';
+        return this.bookState = this.USER_RENTED;
       }
-      this.bookState = 'RENTED'
+      this.bookState = this.RENTED;
     })
 
     this.comments = [
@@ -43,7 +46,7 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
     ];
 
     this.rent = () => {
-      if (this.bookState !== 'AVAILABLE') return;
+      if (this.bookState !== this.AVAILABLE) return;
       let returnDate = new Date();
       returnDate.setMonth(returnDate.getMonth() + 1);
       const rentObj = {
@@ -55,10 +58,9 @@ angular.module('app').controller('BookDetailController', ['$stateParams', 'books
           returned_at: null
         }
       }
-      this.bookState = 'USER_RENTED';
+
       userService.rentBook(rentObj).then(res => {
-      }).catch(err => {
-        this.bookState = 'AVAILABLE';
+        this.bookState = this.USER_RENTED;
       })
     }
   }
