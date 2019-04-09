@@ -4,13 +4,13 @@ $option-size: 35px;
   padding: 20px;
   box-shadow: 0 0 8px 0 $light-grey;
   display: flex;
+  justify-content: space-between;
 
   .navbar-img {
     height: 45px;
   }
 
   .nav-options {
-    margin-left: auto;
     display: flex;
     align-items: flex-end;
 
