@@ -1,8 +1,7 @@
 navbar
 .main-container
   .profile-header
-    img.user-img(ng-if='!profileCtrl.userInfo.image_url' src='../../assets/default_book.svg' alt='no-book')
-    img.user-img(ng-if='profileCtrl.userInfo.image_url' src='{{profileCtrl.userInfo.image_url}}' alt='no-book')
+    img.user-img(src="{{profileCtrl.userInfo.image_url ? profileCtrl.userInfo.image_url : '../../assets/default_book.svg' }}" alt='no-book')
     .user-data
       span.user-name {{profileCtrl.userInfo.first_name}} {{profileCtrl.userInfo.last_name}}
       span.user-email {{profileCtrl.userInfo.email}}
@@ -16,15 +15,17 @@ navbar
   span.main-title {{'profile.readTitle' | translate}}
   .books
     .book(ng-repeat='rent in profileCtrl.rents')
-      img.book-img(ng-if='rent.book.image_url' src='{{rent.book.image_url}}' alt='book-img' ui-sref='centered.book-detail({ bookId: rent.book.id })')
-      img.no-book-img(ng-if='!rent.book.image_url' src='../../assets/default_book.svg' alt='no-book')
+      a(ui-sref='centered.book-detail({ bookId: rent.book.id })')
+        img.book-img(ng-if='rent.book.image_url' src='{{rent.book.image_url}}' alt='book-img')
+        img.no-book-img(ng-if='!rent.book.image_url' src='../../assets/default_book.svg' alt='no-book')
       span.book-title {{rent.book.title}}
       span.book-author {{rent.book.author}}
   span.main-title {{'profile.wishlist' | translate}}
   .books.wishes
     .book(ng-repeat='wish in profileCtrl.wishes')
-      img.book-img(ng-if='wish.book.image_url' src='{{wish.book.image_url}}' alt='book-img' ui-sref='centered.book-detail({ bookId: wish.book.id })')
-      img.no-book-img(ng-if='!wish.book.image_url' src='../../assets/default_book.svg' alt='no-book')
+      a(ui-sref='centered.book-detail({ bookId: wish.book.id })')
+        img.book-img(ng-if='wish.book.image_url' src='{{wish.book.image_url}}' alt='book-img')
+        img.no-book-img(ng-if='!wish.book.image_url' src='../../assets/default_book.svg' alt='no-book')
       span.book-title {{wish.book.title}}
       span.book-author {{wish.book.author}}
   .book-comments

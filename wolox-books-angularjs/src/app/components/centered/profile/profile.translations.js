@@ -1,7 +1,7 @@
 angular.module('app').config([
     '$translateProvider',
     function ($translateProvider) {
-  
+
       $translateProvider.translations('es', {
         profile: {
           read: 'leidos',
@@ -13,4 +13,3 @@ angular.module('app').config([
       });
     }
   ]);
-  
