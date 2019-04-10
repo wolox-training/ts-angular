@@ -5,7 +5,8 @@ angular.module('app').config([
     $translateProvider.translations('es', {
       Navbar: {
         logout: 'Cerrar sesión',
-        profile: 'Perfil'
+        profile: 'Perfil',
+        notificationTitle: 'Se encuentra disponible el libro'
       }
     });
   }

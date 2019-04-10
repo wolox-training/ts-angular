@@ -6,13 +6,13 @@
       img.option-img(src='../../../assets/notifications.svg' alt='notification' ng-click='$ctrl.toggeNotifications()')
       .counter(ng-if='$ctrl.notificationsCounter') {{$ctrl.notificationsCounter}}
       .notifications-container(ng-if='$ctrl.showingNotifications')
-        .notification(ng-repeat='notification in $ctrl.notifications')
-          img.no-book(ng-if='!notification.image_url' src='../../../assets/default_book.svg' alt='notification')
-          img.book(ng-if='notification.image_url' src='{{notification.image_url}}' alt='notification')
+        .notification(ng-repeat='notification in $ctrl.notifications' ng-click='$ctrl.readNotification(notification.id, notification.book.id)')
+          img.no-book(ng-if='!notification.book.image_url' src='../../../assets/default_book.svg' alt='notification')
+          img.book(ng-if='notification.book.image_url' src='{{notification.book.image_url}}' alt='notification')
           .notification-details
-            span.title Se encuentra disponible el libro
-            span.book-title Titulo
-            span.book-author Autor
+            span.title {{'Navbar.notificationTitle' | translate}}
+            span.book-title {{notification.book.title}}
+            span.book-author {{notification.book.author}}
     img.option-img(src='../../../assets/add_book.svg' alt='add-book')
     .user-menu
       img.option-img(src='../../../assets/default_book.svg' alt='user-img' ng-click='$ctrl.toggleMenu()')

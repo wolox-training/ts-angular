@@ -60,4 +60,11 @@ function NavbarController($state, localStorageService, userService) {
     if (!this.notificationsCounter) return;
     this.showingNotifications = !this.showingNotifications;
   }
+
+  this.readNotification = (notificationId, bookId) => {
+
+    userService.readNotification(notificationId).then(res => {
+      $state.transitionTo('centered.login');
+    })
+  }
 }
