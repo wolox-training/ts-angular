@@ -1,0 +1,38 @@
+# npm dependencies
+node_modules
+
+# npm log file
+npm-debug.log
+
+# compiled code folder
+build
+
+# aws keys file
+config/aws.js
+
+# config keys
+config/secrets.js
+
+# mac files
+.DS_Store
+
+# unit tests coverage report
+test/unit/coverage
+
+# unit tests results report
+test/unit/test-results.xml
+
+# protractor test results report
+protractor-results.xml
+
+# static analysis report
+code-quality-report
+
+# deploy cache
+.awspublish*
+
+#Backstopjs images
+backstop_data
+
+#IDE files
+.vscode

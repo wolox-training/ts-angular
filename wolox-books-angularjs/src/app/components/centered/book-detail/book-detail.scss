@@ -1,0 +1,152 @@
+$book-img-height: 275px;
+$book-img-width: 250px;
+$no-book-size: 120px;
+$sugg-book-height: 125px;
+$sugg-book-width: 90px;
+$user-image-size: 40px;
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 840px;
+  width: 100%;
+}
+
+.return {
+  font-size: 12px;
+  color: $dark-grey;
+  margin: 20px 0 0 20px;
+}
+
+.book-details-container {
+  border-bottom: 2px solid $ribbon-blue;
+  display: flex;
+  height: 310px;
+  margin-top: 50px;
+  padding-right: 15px;
+
+  .book-info {
+    display: flex;
+    flex-direction: column;
+    height: 275px;
+    margin-left: 20px;
+
+    .book-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .book-item {
+      color: $dark-grey;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .book-author {
+      margin-bottom: 15px;
+    }
+
+    .book-desc {
+      color: $light-grey;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .blue-btn {
+      margin-top: auto;
+    }
+  }
+
+  .book-img {
+    height: $book-img-height;
+    max-width: $book-img-width;
+    width: 100%;
+  }
+    
+  .no-book-img {
+    height: $book-img-height;
+    max-width: $book-img-width;
+    width: 100%;
+    background-color: $grey;
+    padding: 50px;
+  }
+}
+
+.book-suggestions {
+  border-bottom: 2px solid $ribbon-blue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 15px 20px;
+
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .book {
+      margin: 5px 30px 10px 20px;
+
+      .book-img {
+        height: $sugg-book-height;
+        width: $sugg-book-width;
+      }
+
+      .no-book-img {
+        background-color: $grey;
+        padding: 15px;
+        height: $sugg-book-height;
+        width: $sugg-book-width;
+      }
+    }
+  }
+}
+
+.details-title {
+  color: $green;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0 20px;
+}
+
+.user-img {
+  height: $user-image-size;
+  width: $user-image-size;
+  object-fit: contain;
+}
+
+.book-comments {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+
+  .comment-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+
+    .add-comment {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 5px 0 15px;
+    }
+
+    .comment-input {
+      border: 1px solid $light-grey;
+      height: 70px;
+      resize: none;
+      width: 100%;
+    }
+
+    .green-btn {
+      margin: 20px 0;
+    }
+  }
+}

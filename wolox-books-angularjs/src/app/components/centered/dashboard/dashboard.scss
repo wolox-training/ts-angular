@@ -1,0 +1,99 @@
+$search-icon-size: 25px;
+$book-height: 180px;
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 840px;
+  width: 100%;
+
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .book {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 40px 40px 0;
+      width: 130px;
+
+      .book-img {
+        align-items: center;
+        background-color: $grey;
+        display: flex;
+        height: $book-height;
+        justify-content: center;
+      }
+
+      .book-title {
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .book-author {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      .no-book-img {
+        background-color: $grey;
+        padding: 25px;
+        height: $book-height;
+      }
+    }
+  }
+}
+
+.base-input {
+  background-color: $lighter-grey;
+  color: $light-grey;
+  font-size: 14px;
+  font-style: italic;
+  height: 40px;
+  line-height: 19px;
+  padding: 10px;
+  width: 240px;
+}
+
+.search-icon {
+  height: $search-icon-size;
+  width: $search-icon-size;
+  margin: 0 10px;
+}
+
+.search-icon-container {
+  align-items: center;
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input-container {
+  display: flex;
+}
+
+.filter-criteria {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  @extend .base-input;
+  margin-right: 20px;
+}
+
+.filter-select-img {
+  position: relative;
+
+  &::after {
+    color: $light-grey;
+    content: '\25bc';
+    left: 214px;
+    position: absolute;
+    top: 15px;
+  }
+}
+

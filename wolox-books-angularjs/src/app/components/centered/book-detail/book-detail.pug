@@ -1,0 +1,32 @@
+a.return(ui-sref='centered.dashboard')
+  | {{'BookDetail.return' | translate}}
+.details-container
+  .book-details-container
+    img.book-img(ng-if='bookDetailCtrl.book.image_url' src='{{bookDetailCtrl.book.image_url}}' alt='book-img')
+    img.no-book-img(ng-if='!bookDetailCtrl.book.image_url' src='../../assets/default_book.svg' alt='no-book')
+    .book-info
+      span.book-title {{bookDetailCtrl.book.title}}
+      span.book-item.book-author {{bookDetailCtrl.book.author}}
+      span.book-item {{bookDetailCtrl.book.year}}
+      span.book-item {{bookDetailCtrl.book.genre}}
+      span.book-desc 
+        |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut
+        |  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        |  laboris nisi ut aliquip ex ea commodo consequat.
+      button.blue-btn {{'BookDetail.rent' | translate}}
+  .book-suggestions
+    span.details-title {{'BookDetail.suggestions' | translate}}
+    .books-list
+      .book(ng-repeat='book in bookDetailCtrl.books')
+        img.book-img(ng-if='book.image_url' src='{{book.image_url}}' alt='book-img')
+        img.no-book-img(ng-if='!book.image_url' src='../../assets/default_book.svg' alt='no-book')
+  .book-comments
+    span.details-title {{'BookDetail.comments' | translate}}
+    .comment-container
+      img.user-img(src='../../assets/default_book.svg' alt='no-book')
+      .comment-input-container
+        span.add-comment {{'BookDetail.addComment' | translate}}
+        textarea.comment-input
+        button.green-btn {{'BookDetail.send' | translate}}
+    .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments')
+      comment(comment='comment')
