@@ -2,10 +2,16 @@
   a(ui-sref='centered.dashboard')
     img.navbar-img(src='../../../assets/wbooks_logo.svg' alt='wolox-logo')
   .nav-options
-    .notifications(ng-click='$ctrl.showNotifications()')
-      img.option-img(src='../../../assets/notifications.svg' alt='notification')
+    .notifications
+      img.option-img(src='../../../assets/notifications.svg' alt='notification' ng-click='$ctrl.toggeNotifications()')
       .counter(ng-if='$ctrl.notificationsCounter') {{$ctrl.notificationsCounter}}
-      .notifications-container
+      .notifications-container(ng-if='$ctrl.showingNotifications')
+        .notification(ng-repeat='notification in $ctrl.notifications')
+          img.option-img(src='../../../assets/notifications.svg' alt='notification')
+          .notification-details
+            span.title Se encuentra disponible el libro
+            span.book-title Titulo
+            span.book-author Autor
     img.option-img(src='../../../assets/add_book.svg' alt='add-book')
     .user-menu
       img.option-img(src='../../../assets/default_book.svg' alt='user-img' ng-click='$ctrl.toggleMenu()')

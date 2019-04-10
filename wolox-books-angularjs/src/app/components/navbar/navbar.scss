@@ -11,29 +11,29 @@ $option-size: 35px;
     height: 45px;
   }
 
-  .notifications {
-    position: relative;
-
-    .counter {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      width: 11px;
-      border-radius: 50%;
-      height: 12px;
-      right: 27px;
-      top: -3px;
-      position: absolute;
-      background-color: $red;
-      color: $white;
-      font-size: 10px;
-      padding: 7px;
-    }
-  }
-
   .nav-options {
     display: flex;
     height: $option-size;
+
+    .notifications {
+      position: relative;
+  
+      .counter {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 11px;
+        border-radius: 50%;
+        height: 12px;
+        right: 27px;
+        top: -3px;
+        position: absolute;
+        background-color: $red;
+        color: $white;
+        font-size: 10px;
+        padding: 7px;
+      }
+    }
   }
 
   .user-menu {
@@ -65,4 +65,44 @@ $option-size: 35px;
 .option-img {
   margin-right: 25px;
   width: $option-size;
+}
+
+.notifications-container {
+  position: absolute;
+  background-color: $white;
+  top: 45px;
+  left: -265px;
+  box-shadow: 0 0 3px 0 $grey;
+}
+
+.notification {
+  width: 300px;
+  padding: 10px;
+  border-bottom: 1px solid $grey;
+  display: flex;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .notification-details {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: $dark-grey;
+      font-style: italic;
+    }
+
+    .book-title {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .book-author {
+      color: $dark-grey;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+  }
 }
