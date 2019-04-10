@@ -1,10 +1,12 @@
 angular.module('app').config([
   '$translateProvider',
   function ($translateProvider) {
+
     $translateProvider.translations('es', {
-      requiredField: 'Campo obligatorio'
+      login: {
+        email: 'Email',
+        login: 'Login'
+      }
     });
-    $translateProvider.preferredLanguage('es');
-    $translateProvider.useSanitizeValueStrategy(null);
   }
 ]);

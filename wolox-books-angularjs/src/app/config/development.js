@@ -1,3 +1,3 @@
 angular.module('app').constant('configuration', {
-  apiUrl: 'localhost:3000'
+  apiUrl: 'https://wbooks-api-stage.herokuapp.com/api/v1'
 });

@@ -4,7 +4,7 @@ angular.module('app').config([
 
     // For any unmatched urls
     $urlRouterProvider.otherwise(($injector) => {
-      $injector.get('$state').go('centered.dashboard');
+      $injector.get('$state').go('centered.login');
     });
 
     // Now set up the states
