@@ -13,7 +13,7 @@ a.return(ui-sref='centered.dashboard')
         |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut
         |  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
         |  laboris nisi ut aliquip ex ea commodo consequat.
-      button.rent-btn {{'BookDetail.rent' | translate}}
+      button.blue-btn {{'BookDetail.rent' | translate}}
   .book-suggestions
     span.details-title {{'BookDetail.suggestions' | translate}}
     .books-list
@@ -27,6 +27,6 @@ a.return(ui-sref='centered.dashboard')
       .comment-input-container
         span.add-comment {{'BookDetail.addComment' | translate}}
         textarea.comment-input
-        button.send-btn {{'BookDetail.send' | translate}}
+        button.green-btn {{'BookDetail.send' | translate}}
     .saved-comments-container(ng-repeat='comment in bookDetailCtrl.comments')
       comment(comment='comment')

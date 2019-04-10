@@ -54,9 +54,7 @@ $user-image-size: 40px;
       margin-top: 15px;
     }
 
-    .rent-btn {
-      @extend %base-btn;
-      background: $ribbon-blue;
+    .blue-btn {
       margin-top: auto;
     }
   }
@@ -147,10 +145,7 @@ $user-image-size: 40px;
       width: 100%;
     }
 
-    .send-btn {
-      @extend %base-btn;
-      background: $green;
-      font-size: 16px;
+    .green-btn {
       margin: 20px 0;
     }
   }

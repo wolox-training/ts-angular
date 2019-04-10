@@ -1,0 +1,33 @@
+.main-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+
+  .blue-btn {
+    margin-top: 30px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  width: 100%;
+  margin-top: 20px;
+
+  .form-input {
+    background-color: $lighter-grey;
+    height: 38px;
+    width: 100%;
+  }
+
+  .form-label {
+    margin-bottom: 5px;
+  }
+
+  .error {
+    color: $red;
+  }
+}

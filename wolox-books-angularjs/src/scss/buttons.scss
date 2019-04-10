@@ -5,3 +5,14 @@
   height: 40px;
   width: 195px;
 }
+
+.blue-btn {
+  @extend %base-btn;
+  background: $ribbon-blue;
+}
+
+.green-btn {
+  @extend %base-btn;
+  background: $green;
+  font-size: 16px;
+}

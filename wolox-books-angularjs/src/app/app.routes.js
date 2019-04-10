@@ -36,6 +36,26 @@ angular.module('app').config([
             controllerAs: 'bookDetailCtrl'
           }
         }
+      })
+      .state('centered.sign-up', {
+        url: '/sign-up',
+        views: {
+          content: {
+            templateUrl: '../app/components/centered/sign-up/sign-up.html',
+            controller: 'SignUpController',
+            controllerAs: 'signUpCtrl'
+          }
+        }
+      })
+      .state('centered.login', {
+        url: '/login',
+        views: {
+          content: {
+            templateUrl: '../app/components/centered/login/login.html',
+            controller: 'LoginController',
+            controllerAs: 'loginCtrl'
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);
